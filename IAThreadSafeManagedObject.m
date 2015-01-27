@@ -67,8 +67,8 @@ void dynamicSetter(id self, SEL _cmd, id obj) {
         //XXX:  clunky way to get the property name, but meh...
         NSString* propertyName =  NSStringFromSelector(_cmd);
         propertyName =  [[propertyName componentsSeparatedByString:@"set"] objectAtIndex:1];
-        //NSLog(@"Setting property:  name=%@", propertyName);
-        NSLog(@"Setting property: %@ on thread: %@", propertyName, [NSThread currentThread]);
+        //CoreDataLog(@"Setting property:  name=%@", propertyName);
+        CoreDataLog(@"Setting property: on thread: ", propertyName, [NSThread currentThread], nil);
 
         [self willChangeValueForKey:propertyName];
         [self setPrimitiveValue:obj forKey:propertyName];
@@ -101,7 +101,7 @@ void dynamicSetter(id self, SEL _cmd, id obj) {
             [properties addObject:[NSString stringWithCString:name encoding:[NSString defaultCStringEncoding]]];
         }
         else {
-            NSLog(@"Found an unnamed property...?");
+            CoreDataLog(@"Found an unnamed property...?", nil);
         }
     }
     free(objcProps);
@@ -125,7 +125,7 @@ void dynamicSetter(id self, SEL _cmd, id obj) {
     if ([targetSel hasPrefix:@"set"] && [targetSel rangeOfString:@"Primitive"].location == NSNotFound && [targetSel rangeOfString:@":"].location != NSNotFound) {
         NSString* propertyName = [self propertyNameFromSetter:sel];
         if ([[self declaredPropertyNames] containsObject:propertyName]) {
-            NSLog(@"Overriding selector:  %@", targetSel);
+            CoreDataLog(@"Overriding selector: ", targetSel, nil);
             class_addMethod([self class], sel, (IMP)dynamicSetter, "v@:@");
             return YES;
         }

@@ -7,8 +7,26 @@
 //
 
 #import "GSCoreDataManager.h"
-
+#import "../GingersnapSession.h"
 @implementation GSCoreDataManager
+
+ void CoreDataLog(NSString* string1, ...){
+    
+    NSMutableArray *arguments=[[NSMutableArray alloc]initWithArray:nil];
+    id eachObject;
+    va_list argumentList;
+    if (string1)
+    {
+        [arguments addObject: string1];
+        va_start(argumentList, string1);
+        while ((eachObject = va_arg(argumentList, id) ))
+        {
+            [arguments addObject: eachObject];
+        }
+        va_end(argumentList);
+    }
+    NSLog(@"%@",arguments);
+}
 
 #pragma mark - Core Data stack
 
@@ -34,6 +52,18 @@
     return sharedMyManager;
 }
 
+-(NSArray*)fetchObjectsWithClass:(Class)class
+{
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:NSStringFromClass(class) inManagedObjectContext:self.managedObjectContext];
+    [fetchRequest setEntity:entity];
+    
+    NSArray *results = [self.managedObjectContext executeFetchRequest:fetchRequest  error:nil];
+    
+   // assert([results count] <2);
+    
+    return results;
+}
 
 -(IAThreadSafeManagedObject*)fetchSingleObjectWithID:(id)identifier andClass:(Class)class
 {
@@ -44,9 +74,10 @@
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"(identifier = %@)", identifier];
     [fetchRequest setPredicate:predicate];
     NSArray *results = [self.managedObjectContext executeFetchRequest:fetchRequest  error:nil];
+    
     assert([results count] <2);
     
-    return [results count]? [results objectAtIndex:0] : nil;
+    return [results count] ? [results objectAtIndex:0] : nil;
 }
 - (NSURL *)applicationDocumentsDirectory {
     // The directory the application uses to store the Core Data store file. This code uses a directory named "fp.GSCoreData" in the application's documents directory.
@@ -58,7 +89,7 @@
     if (_managedObjectModel != nil) {
         return _managedObjectModel;
     }
-    NSURL *modelURL = [[NSBundle mainBundle] URLForResource:@"GSCoreData" withExtension:@"momd"];
+    NSURL *modelURL = [[NSBundle mainBundle] URLForResource:@"GingersnapCDModel" withExtension:@"momd"];
     _managedObjectModel = [[NSManagedObjectModel alloc] initWithContentsOfURL:modelURL];
     return _managedObjectModel;
 }
@@ -72,7 +103,7 @@
     // Create the coordinator and store
     
     _persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[self managedObjectModel]];
-    NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"GSCoreData.sqlite"];
+    NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"GingersnapCDModel.sqlite"];
     NSError *error = nil;
     NSString *failureReason = @"There was an error creating or loading the application's saved data.";
     if (![_persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeURL options:nil error:&error]) {
@@ -84,7 +115,7 @@
         error = [NSError errorWithDomain:@"YOUR_ERROR_DOMAIN" code:9999 userInfo:dict];
         // Replace this with code to handle the error appropriately.
         // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-        NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+        CoreDataLog(@"Unresolved error", error, [error userInfo], nil);
         abort();
     }
     
@@ -102,7 +133,7 @@
     if (!coordinator) {
         return nil;
     }
-    _managedObjectContext = [[IAThreadSafeContext alloc] init];
+    _managedObjectContext = [[IAThreadSafeContext alloc] initWithConcurrencyType:NSPrivateQueueConcurrencyType];
     [_managedObjectContext setPersistentStoreCoordinator:coordinator];
     return _managedObjectContext;
 }
@@ -116,9 +147,17 @@
         if ([managedObjectContext hasChanges] && ![managedObjectContext save:&error]) {
             // Replace this implementation with code to handle the error appropriately.
             // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-            NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+            CoreDataLog(@"Unresolved error ", error, [error userInfo], nil);
             abort();
         }
     }
+   // dispatch_get_main_queue();
+    //[GingersnapSession sharedManager].coreDataQueue
+    dispatch_time_t delay = dispatch_time(DISPATCH_TIME_NOW, 3 * NSEC_PER_SEC);
+    dispatch_after(delay, dispatch_get_main_queue(), ^(void){
+        [self saveContext];
+    });
+    
+    
 }
 @end

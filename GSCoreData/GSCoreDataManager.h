@@ -9,12 +9,16 @@
 #import <Foundation/Foundation.h>
 #import "../IAThreadSafeContext.h"
 #import "../GSThreadSafeManagedObject.h"
+
+void CoreDataLog(NSString* string1,...);
+
 @interface GSCoreDataManager : NSObject
 @property (readonly, strong, nonatomic) IAThreadSafeContext *managedObjectContext;
 @property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;
 @property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
 
 
+-(NSArray*)fetchObjectsWithClass:(Class)class;
 
 -(IAThreadSafeManagedObject*)fetchSingleObjectWithID:(id)identifier andClass:(Class)class;
 

@@ -19,45 +19,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    //just need to initialise this
     [GingersnapSession sharedManager];
-    //calling this implements some stuff on the main thread
-    NSLog(@"main thread: %@", [NSThread mainThread]);
-//    dispatch_async([GingersnapSession sharedManager].coreDataQueue, ^{
-//            [MyEntity initWithCallback:^(IAThreadSafeManagedObject *object) {
-//            NSLog(@"coredataQueueThread: %@", [NSThread currentThread]);
-//
-//            MyEntity* entity  = (MyEntity*)object;
-//            entity.attributeA = [NSNumber numberWithDouble:0.12];
-//            entity.attributeB = [NSDate date];
-//            entity.attributeC = @"WINNY";
-//            NSLog(@"currentAfterSetterThread: %@", [NSThread currentThread]);
-//
-//            NSLog(@"a: %@", entity.attributeA);
-//            NSLog(@"b: %@", entity.attributeB);
-//            NSLog(@"c: %@", entity.attributeC);
-//            NSLog(@"currentAfterGetterThread: %@", [NSThread currentThread]);
-//        }];
-//    });
     
+   // CoreDataLog(user.auth_token, nil);
+    [[GCRequests sharedManager] getRootWithCallback:^(NSDictionary *jsonData, NSError *error, NSString *rawData) {
+        GingersnapUser* user = [GingersnapUser initWithUser:nil];
+        user.auth_token = @"YOLO";
+        CoreDataLog(user.auth_token, nil);
+    } andHTTPRequestType:AUTOMATED];
     
-    
-        NSLog(@"coredataQueueThread: %@", [NSThread currentThread]);
-    
-        NSNumber* identifier = [NSNumber numberWithInt:7];
-        MyEntity* entity  = [MyEntity initWithIdentifier:identifier];
-        entity.attributeB = [NSDate date];
-        entity.attributeC = @"WINNY";
-        NSLog(@"currentAfterSetterThread: %@", [NSThread currentThread]);
-        dispatch_async([GingersnapSession sharedManager].coreDataQueue, ^{
-
-        NSLog(@"a: %@", entity.identifier);
-        NSLog(@"b: %@", entity.attributeB);
-        NSLog(@"c: %@", entity.attributeC);
-        NSLog(@"currentAfterGetterThread: %@", [NSThread currentThread]);
-        });
-   
-
-    NSLog(@"endThread: %@", [NSThread currentThread]);
 }
 
 - (void)didReceiveMemoryWarning {

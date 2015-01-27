@@ -10,7 +10,6 @@
 		1A11232C1A76522F00A35B33 /* GSThreadSafeManagedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A11232B1A76522F00A35B33 /* GSThreadSafeManagedObject.m */; };
 		1AAE3CA31A764EBC0012B181 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AAE3CA21A764EBC0012B181 /* main.m */; };
 		1AAE3CA61A764EBC0012B181 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AAE3CA51A764EBC0012B181 /* AppDelegate.m */; };
-		1AAE3CA91A764EBC0012B181 /* GSCoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1AAE3CA71A764EBC0012B181 /* GSCoreData.xcdatamodeld */; };
 		1AAE3CAC1A764EBC0012B181 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AAE3CAB1A764EBC0012B181 /* ViewController.m */; };
 		1AAE3CAF1A764EBC0012B181 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AAE3CAD1A764EBC0012B181 /* Main.storyboard */; };
 		1AAE3CB11A764EBC0012B181 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1AAE3CB01A764EBC0012B181 /* Images.xcassets */; };
@@ -18,10 +17,19 @@
 		1AAE3CC01A764EBC0012B181 /* GSCoreDataTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AAE3CBF1A764EBC0012B181 /* GSCoreDataTests.m */; };
 		1AAE3CCE1A764F6A0012B181 /* IAThreadSafeContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AAE3CCB1A764F6A0012B181 /* IAThreadSafeContext.m */; };
 		1AAE3CCF1A764F6A0012B181 /* IAThreadSafeManagedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AAE3CCD1A764F6A0012B181 /* IAThreadSafeManagedObject.m */; };
-		1AAE3CD21A764FE40012B181 /* PracticeEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AAE3CD11A764FE40012B181 /* PracticeEntity.m */; };
 		1AAFFA701A7682B700549DB5 /* GSCoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AAFFA6F1A7682B700549DB5 /* GSCoreDataManager.m */; };
-		1AAFFA731A768BB300549DB5 /* MyEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AAFFA721A768BB300549DB5 /* MyEntity.m */; };
 		1AAFFA761A76957E00549DB5 /* GingersnapSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AAFFA751A76957E00549DB5 /* GingersnapSession.m */; };
+		1AEBE3CC1A77DE4B00CDF4F8 /* HTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AEBE3CB1A77DE4B00CDF4F8 /* HTTPRequest.m */; };
+		1AEBE3D01A77DE7D00CDF4F8 /* HTTPRequests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AEBE3CF1A77DE7D00CDF4F8 /* HTTPRequests.m */; };
+		1AEBE3D31A77DE8F00CDF4F8 /* GPRequests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AEBE3D21A77DE8F00CDF4F8 /* GPRequests.m */; };
+		1AEBE3D61A77DE9F00CDF4F8 /* GCRequests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AEBE3D51A77DE9F00CDF4F8 /* GCRequests.m */; };
+		1AEBE3DA1A77E37900CDF4F8 /* GingersnapCDModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1AEBE3D81A77E37900CDF4F8 /* GingersnapCDModel.xcdatamodeld */; };
+		1AEBE3DD1A77E3DB00CDF4F8 /* GingersnapUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AEBE3DC1A77E3DB00CDF4F8 /* GingersnapUser.m */; };
+		1AEBE3E31A77E72200CDF4F8 /* GingersnapManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AEBE3E21A77E72200CDF4F8 /* GingersnapManager.m */; };
+		1AEBE3E71A77E74B00CDF4F8 /* GPAppManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AEBE3E61A77E74B00CDF4F8 /* GPAppManager.m */; };
+		1AEBE3EA1A77E75900CDF4F8 /* GCAppManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AEBE3E91A77E75900CDF4F8 /* GCAppManager.m */; };
+		1AEBE3ED1A77E92C00CDF4F8 /* GingersnapImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AEBE3EC1A77E92C00CDF4F8 /* GingersnapImage.m */; };
+		1AEBE3F01A77E9D900CDF4F8 /* GingersnapImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AEBE3EF1A77E9D900CDF4F8 /* GingersnapImageManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,7 +51,6 @@
 		1AAE3CA21A764EBC0012B181 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1AAE3CA41A764EBC0012B181 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1AAE3CA51A764EBC0012B181 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		1AAE3CA81A764EBC0012B181 /* GSCoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GSCoreData.xcdatamodel; sourceTree = "<group>"; };
 		1AAE3CAA1A764EBC0012B181 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		1AAE3CAB1A764EBC0012B181 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		1AAE3CAE1A764EBC0012B181 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -56,14 +63,32 @@
 		1AAE3CCB1A764F6A0012B181 /* IAThreadSafeContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IAThreadSafeContext.m; sourceTree = "<group>"; };
 		1AAE3CCC1A764F6A0012B181 /* IAThreadSafeManagedObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IAThreadSafeManagedObject.h; sourceTree = "<group>"; };
 		1AAE3CCD1A764F6A0012B181 /* IAThreadSafeManagedObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IAThreadSafeManagedObject.m; sourceTree = "<group>"; };
-		1AAE3CD01A764FE40012B181 /* PracticeEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PracticeEntity.h; sourceTree = "<group>"; };
-		1AAE3CD11A764FE40012B181 /* PracticeEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PracticeEntity.m; sourceTree = "<group>"; };
-		1AAFFA6E1A7682B700549DB5 /* GSCoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSCoreDataManager.h; sourceTree = "<group>"; };
-		1AAFFA6F1A7682B700549DB5 /* GSCoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSCoreDataManager.m; sourceTree = "<group>"; };
-		1AAFFA711A768BB300549DB5 /* MyEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyEntity.h; sourceTree = "<group>"; };
-		1AAFFA721A768BB300549DB5 /* MyEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyEntity.m; sourceTree = "<group>"; };
+		1AAFFA6E1A7682B700549DB5 /* GSCoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GSCoreDataManager.h; path = GSCoreData/GSCoreDataManager.h; sourceTree = "<group>"; };
+		1AAFFA6F1A7682B700549DB5 /* GSCoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GSCoreDataManager.m; path = GSCoreData/GSCoreDataManager.m; sourceTree = "<group>"; };
 		1AAFFA741A76957E00549DB5 /* GingersnapSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GingersnapSession.h; sourceTree = "<group>"; };
 		1AAFFA751A76957E00549DB5 /* GingersnapSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GingersnapSession.m; sourceTree = "<group>"; };
+		1AEBE3CA1A77DE4B00CDF4F8 /* HTTPRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPRequest.h; sourceTree = "<group>"; };
+		1AEBE3CB1A77DE4B00CDF4F8 /* HTTPRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTPRequest.m; sourceTree = "<group>"; };
+		1AEBE3CE1A77DE7D00CDF4F8 /* HTTPRequests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPRequests.h; sourceTree = "<group>"; };
+		1AEBE3CF1A77DE7D00CDF4F8 /* HTTPRequests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTPRequests.m; sourceTree = "<group>"; };
+		1AEBE3D11A77DE8F00CDF4F8 /* GPRequests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPRequests.h; sourceTree = "<group>"; };
+		1AEBE3D21A77DE8F00CDF4F8 /* GPRequests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPRequests.m; sourceTree = "<group>"; };
+		1AEBE3D41A77DE9F00CDF4F8 /* GCRequests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCRequests.h; sourceTree = "<group>"; };
+		1AEBE3D51A77DE9F00CDF4F8 /* GCRequests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCRequests.m; sourceTree = "<group>"; };
+		1AEBE3D71A77E07900CDF4F8 /* HTTPConsts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPConsts.h; sourceTree = "<group>"; };
+		1AEBE3D91A77E37900CDF4F8 /* GingersnapCDModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GingersnapCDModel.xcdatamodel; sourceTree = "<group>"; };
+		1AEBE3DB1A77E3DB00CDF4F8 /* GingersnapUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GingersnapUser.h; sourceTree = "<group>"; };
+		1AEBE3DC1A77E3DB00CDF4F8 /* GingersnapUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GingersnapUser.m; sourceTree = "<group>"; };
+		1AEBE3E11A77E72200CDF4F8 /* GingersnapManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GingersnapManager.h; sourceTree = "<group>"; };
+		1AEBE3E21A77E72200CDF4F8 /* GingersnapManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GingersnapManager.m; sourceTree = "<group>"; };
+		1AEBE3E51A77E74B00CDF4F8 /* GPAppManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPAppManager.h; sourceTree = "<group>"; };
+		1AEBE3E61A77E74B00CDF4F8 /* GPAppManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPAppManager.m; sourceTree = "<group>"; };
+		1AEBE3E81A77E75900CDF4F8 /* GCAppManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCAppManager.h; sourceTree = "<group>"; };
+		1AEBE3E91A77E75900CDF4F8 /* GCAppManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCAppManager.m; sourceTree = "<group>"; };
+		1AEBE3EB1A77E92C00CDF4F8 /* GingersnapImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GingersnapImage.h; sourceTree = "<group>"; };
+		1AEBE3EC1A77E92C00CDF4F8 /* GingersnapImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GingersnapImage.m; sourceTree = "<group>"; };
+		1AEBE3EE1A77E9D900CDF4F8 /* GingersnapImageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GingersnapImageManager.h; sourceTree = "<group>"; };
+		1AEBE3EF1A77E9D900CDF4F8 /* GingersnapImageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GingersnapImageManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,20 +112,21 @@
 		1A11232D1A76526500A35B33 /* Gingersnap Entities */ = {
 			isa = PBXGroup;
 			children = (
-				1AAFFA711A768BB300549DB5 /* MyEntity.h */,
-				1AAFFA721A768BB300549DB5 /* MyEntity.m */,
-				1AAE3CD01A764FE40012B181 /* PracticeEntity.h */,
-				1AAE3CD11A764FE40012B181 /* PracticeEntity.m */,
+				1AEBE3EB1A77E92C00CDF4F8 /* GingersnapImage.h */,
+				1AEBE3EC1A77E92C00CDF4F8 /* GingersnapImage.m */,
 				1A11232E1A7652D900A35B33 /* GingersnapEntities.h */,
+				1AEBE3DB1A77E3DB00CDF4F8 /* GingersnapUser.h */,
+				1AEBE3DC1A77E3DB00CDF4F8 /* GingersnapUser.m */,
 			);
 			name = "Gingersnap Entities";
+			path = GSCoreData;
 			sourceTree = "<group>";
 		};
 		1AAE3C941A764EBC0012B181 = {
 			isa = PBXGroup;
 			children = (
-				1AAFFA741A76957E00549DB5 /* GingersnapSession.h */,
-				1AAFFA751A76957E00549DB5 /* GingersnapSession.m */,
+				1AEBE3DE1A77E67300CDF4F8 /* Gingersnap */,
+				1AEBE3CD1A77DE5700CDF4F8 /* HTTP */,
 				1AAE3C9F1A764EBC0012B181 /* GSCoreData */,
 				1AAE3CBC1A764EBC0012B181 /* GSCoreDataTests */,
 				1AAE3C9E1A764EBC0012B181 /* Products */,
@@ -119,8 +145,6 @@
 		1AAE3C9F1A764EBC0012B181 /* GSCoreData */ = {
 			isa = PBXGroup;
 			children = (
-				1A11232D1A76526500A35B33 /* Gingersnap Entities */,
-				1AAE3CC91A764F050012B181 /* Thread Safe Objects */,
 				1AAE3CA41A764EBC0012B181 /* AppDelegate.h */,
 				1AAE3CA51A764EBC0012B181 /* AppDelegate.m */,
 				1AAE3CAA1A764EBC0012B181 /* ViewController.h */,
@@ -128,10 +152,7 @@
 				1AAE3CAD1A764EBC0012B181 /* Main.storyboard */,
 				1AAE3CB01A764EBC0012B181 /* Images.xcassets */,
 				1AAE3CB21A764EBC0012B181 /* LaunchScreen.xib */,
-				1AAE3CA71A764EBC0012B181 /* GSCoreData.xcdatamodeld */,
 				1AAE3CA01A764EBC0012B181 /* Supporting Files */,
-				1AAFFA6E1A7682B700549DB5 /* GSCoreDataManager.h */,
-				1AAFFA6F1A7682B700549DB5 /* GSCoreDataManager.m */,
 			);
 			path = GSCoreData;
 			sourceTree = "<group>";
@@ -173,7 +194,68 @@
 				1A11232B1A76522F00A35B33 /* GSThreadSafeManagedObject.m */,
 			);
 			name = "Thread Safe Objects";
-			path = ..;
+			sourceTree = "<group>";
+		};
+		1AEBE3CD1A77DE5700CDF4F8 /* HTTP */ = {
+			isa = PBXGroup;
+			children = (
+				1AEBE3D71A77E07900CDF4F8 /* HTTPConsts.h */,
+				1AEBE3CA1A77DE4B00CDF4F8 /* HTTPRequest.h */,
+				1AEBE3CB1A77DE4B00CDF4F8 /* HTTPRequest.m */,
+				1AEBE3CE1A77DE7D00CDF4F8 /* HTTPRequests.h */,
+				1AEBE3CF1A77DE7D00CDF4F8 /* HTTPRequests.m */,
+				1AEBE3D11A77DE8F00CDF4F8 /* GPRequests.h */,
+				1AEBE3D21A77DE8F00CDF4F8 /* GPRequests.m */,
+				1AEBE3D41A77DE9F00CDF4F8 /* GCRequests.h */,
+				1AEBE3D51A77DE9F00CDF4F8 /* GCRequests.m */,
+			);
+			name = HTTP;
+			sourceTree = "<group>";
+		};
+		1AEBE3DE1A77E67300CDF4F8 /* Gingersnap */ = {
+			isa = PBXGroup;
+			children = (
+				1AEBE3DF1A77E69100CDF4F8 /* Gingersnap CoreData */,
+			);
+			name = Gingersnap;
+			sourceTree = "<group>";
+		};
+		1AEBE3DF1A77E69100CDF4F8 /* Gingersnap CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				1AAE3CC91A764F050012B181 /* Thread Safe Objects */,
+				1AEBE3E01A77E6F400CDF4F8 /* Logic */,
+				1A11232D1A76526500A35B33 /* Gingersnap Entities */,
+				1AAFFA6E1A7682B700549DB5 /* GSCoreDataManager.h */,
+				1AAFFA6F1A7682B700549DB5 /* GSCoreDataManager.m */,
+				1AEBE3D81A77E37900CDF4F8 /* GingersnapCDModel.xcdatamodeld */,
+			);
+			name = "Gingersnap CoreData";
+			sourceTree = "<group>";
+		};
+		1AEBE3E01A77E6F400CDF4F8 /* Logic */ = {
+			isa = PBXGroup;
+			children = (
+				1AEBE3E41A77E72D00CDF4F8 /* Gingersnap Manager */,
+				1AAFFA741A76957E00549DB5 /* GingersnapSession.h */,
+				1AAFFA751A76957E00549DB5 /* GingersnapSession.m */,
+			);
+			name = Logic;
+			sourceTree = "<group>";
+		};
+		1AEBE3E41A77E72D00CDF4F8 /* Gingersnap Manager */ = {
+			isa = PBXGroup;
+			children = (
+				1AEBE3E11A77E72200CDF4F8 /* GingersnapManager.h */,
+				1AEBE3E21A77E72200CDF4F8 /* GingersnapManager.m */,
+				1AEBE3E51A77E74B00CDF4F8 /* GPAppManager.h */,
+				1AEBE3E61A77E74B00CDF4F8 /* GPAppManager.m */,
+				1AEBE3E81A77E75900CDF4F8 /* GCAppManager.h */,
+				1AEBE3E91A77E75900CDF4F8 /* GCAppManager.m */,
+				1AEBE3EE1A77E9D900CDF4F8 /* GingersnapImageManager.h */,
+				1AEBE3EF1A77E9D900CDF4F8 /* GingersnapImageManager.m */,
+			);
+			name = "Gingersnap Manager";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -276,17 +358,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1AEBE3D01A77DE7D00CDF4F8 /* HTTPRequests.m in Sources */,
+				1AEBE3D61A77DE9F00CDF4F8 /* GCRequests.m in Sources */,
 				1AAFFA701A7682B700549DB5 /* GSCoreDataManager.m in Sources */,
+				1AEBE3D31A77DE8F00CDF4F8 /* GPRequests.m in Sources */,
+				1AEBE3CC1A77DE4B00CDF4F8 /* HTTPRequest.m in Sources */,
+				1AEBE3EA1A77E75900CDF4F8 /* GCAppManager.m in Sources */,
 				1AAE3CA61A764EBC0012B181 /* AppDelegate.m in Sources */,
-				1AAE3CD21A764FE40012B181 /* PracticeEntity.m in Sources */,
 				1AAFFA761A76957E00549DB5 /* GingersnapSession.m in Sources */,
-				1AAE3CA91A764EBC0012B181 /* GSCoreData.xcdatamodeld in Sources */,
-				1AAFFA731A768BB300549DB5 /* MyEntity.m in Sources */,
 				1A11232C1A76522F00A35B33 /* GSThreadSafeManagedObject.m in Sources */,
+				1AEBE3E31A77E72200CDF4F8 /* GingersnapManager.m in Sources */,
+				1AEBE3DD1A77E3DB00CDF4F8 /* GingersnapUser.m in Sources */,
+				1AEBE3DA1A77E37900CDF4F8 /* GingersnapCDModel.xcdatamodeld in Sources */,
 				1AAE3CAC1A764EBC0012B181 /* ViewController.m in Sources */,
+				1AEBE3E71A77E74B00CDF4F8 /* GPAppManager.m in Sources */,
 				1AAE3CA31A764EBC0012B181 /* main.m in Sources */,
 				1AAE3CCE1A764F6A0012B181 /* IAThreadSafeContext.m in Sources */,
 				1AAE3CCF1A764F6A0012B181 /* IAThreadSafeManagedObject.m in Sources */,
+				1AEBE3F01A77E9D900CDF4F8 /* GingersnapImageManager.m in Sources */,
+				1AEBE3ED1A77E92C00CDF4F8 /* GingersnapImage.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -491,13 +581,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		1AAE3CA71A764EBC0012B181 /* GSCoreData.xcdatamodeld */ = {
+		1AEBE3D81A77E37900CDF4F8 /* GingersnapCDModel.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				1AAE3CA81A764EBC0012B181 /* GSCoreData.xcdatamodel */,
+				1AEBE3D91A77E37900CDF4F8 /* GingersnapCDModel.xcdatamodel */,
 			);
-			currentVersion = 1AAE3CA81A764EBC0012B181 /* GSCoreData.xcdatamodel */;
-			path = GSCoreData.xcdatamodeld;
+			currentVersion = 1AEBE3D91A77E37900CDF4F8 /* GingersnapCDModel.xcdatamodel */;
+			path = GingersnapCDModel.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

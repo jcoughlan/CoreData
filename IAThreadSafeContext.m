@@ -128,11 +128,13 @@
 //NSManagedObject API
 - (NSArray*) executeFetchRequest:(NSFetchRequest *)request error:(NSError *__autoreleasing *)error {
     if ([NSThread currentThread] == myThread) {
+        assert(request.entity);
         return [super executeFetchRequest:request error:error];
     }
     
     @synchronized(self) {
         //execute the call on the correct thread for this context
+       
         NSInvocation* call = [self invocationWithSelector:@selector(executeFetchRequest:error:) andArg:request];
         [call setArgument:&error atIndex:3];
         return [self runInvocationReturningObject:call];

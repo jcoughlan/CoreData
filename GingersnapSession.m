@@ -8,6 +8,7 @@
 
 #import "GingersnapSession.h"
 #import "GSCoreDataManager.h"
+
 @implementation GingersnapSession
 + (GingersnapSession*)sharedManager {
     static GingersnapSession *sharedMyManager = nil;
@@ -16,8 +17,9 @@
         assert([NSThread isMainThread]);
         sharedMyManager = [[self alloc] init];
         sharedMyManager.coreDataQueue = dispatch_queue_create("com.gingersnap.cdQ", NULL);
+        sharedMyManager.apiQueue = dispatch_queue_create("com.gingersnap.apiQ", NULL);
         __block BOOL loaded = false;
-        //dispatch_async(sharedMyManager.coreDataQueue, ^{
+       // dispatch_async(sharedMyManager.coreDataQueue, ^{
         [GSCoreDataManager sharedManager];
             loaded = true;
         //});

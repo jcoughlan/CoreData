@@ -8,6 +8,5 @@
 
 #ifndef GSCoreData_GingersnapEntities_h
 #define GSCoreData_GingersnapEntities_h
-#import "MyEntity.h"
-
+#import "GingersnapUser.h"
 #endif

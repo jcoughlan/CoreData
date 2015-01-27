@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="6735" systemVersion="14B25" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="GingersnapImage" representedClassName="GingersnapImage" syncable="YES">
+        <attribute name="identifier" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="imageData" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="lastUsed" optional="YES" attributeType="Date" syncable="YES"/>
+    </entity>
+    <entity name="GingersnapUser" representedClassName="GingersnapUser" syncable="YES">
+        <attribute name="auth_token" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="user" optional="YES" attributeType="Transformable" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="GingersnapUser" positionX="-63" positionY="-18" width="128" height="75"/>
+        <element name="GingersnapImage" positionX="-54" positionY="9" width="128" height="90"/>
+    </elements>
+</model>
