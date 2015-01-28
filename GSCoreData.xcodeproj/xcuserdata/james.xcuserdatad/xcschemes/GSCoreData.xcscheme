@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "1AAE3C9C1A764EBC0012B181"
-               BuildableName = "GSCoreData.app"
-               BlueprintName = "GSCoreData"
+               BuildableName = "YOLO.app"
+               BlueprintName = "YOLO"
                ReferencedContainer = "container:GSCoreData.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -57,8 +57,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "1AAE3C9C1A764EBC0012B181"
-            BuildableName = "GSCoreData.app"
-            BlueprintName = "GSCoreData"
+            BuildableName = "YOLO.app"
+            BlueprintName = "YOLO"
             ReferencedContainer = "container:GSCoreData.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -77,8 +77,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "1AAE3C9C1A764EBC0012B181"
-            BuildableName = "GSCoreData.app"
-            BlueprintName = "GSCoreData"
+            BuildableName = "YOLO.app"
+            BlueprintName = "YOLO"
             ReferencedContainer = "container:GSCoreData.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -96,8 +96,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "1AAE3C9C1A764EBC0012B181"
-            BuildableName = "GSCoreData.app"
-            BlueprintName = "GSCoreData"
+            BuildableName = "YOLO.app"
+            BlueprintName = "YOLO"
             ReferencedContainer = "container:GSCoreData.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

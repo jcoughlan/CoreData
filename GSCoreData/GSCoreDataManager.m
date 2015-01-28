@@ -9,24 +9,24 @@
 #import "GSCoreDataManager.h"
 #import "../GingersnapSession.h"
 @implementation GSCoreDataManager
-
- void CoreDataLog(NSString* string1, ...){
-    
-    NSMutableArray *arguments=[[NSMutableArray alloc]initWithArray:nil];
-    id eachObject;
-    va_list argumentList;
-    if (string1)
-    {
-        [arguments addObject: string1];
-        va_start(argumentList, string1);
-        while ((eachObject = va_arg(argumentList, id) ))
-        {
-            [arguments addObject: eachObject];
-        }
-        va_end(argumentList);
-    }
-    NSLog(@"%@",arguments);
-}
+//
+// void NSLog(NSString* string1, ...){
+//    
+//    NSMutableArray *arguments=[[NSMutableArray alloc]initWithArray:nil];
+//    id eachObject;
+//    va_list argumentList;
+//    if (string1)
+//    {
+//        [arguments addObject: string1];
+//        va_start(argumentList, string1);
+//        while ((eachObject = va_arg(argumentList, id) ))
+//        {
+//            [arguments addObject: eachObject];
+//        }
+//        va_end(argumentList);
+//    }
+//    NSLog(@"%@",arguments);
+//}
 
 #pragma mark - Core Data stack
 
@@ -59,8 +59,6 @@
     [fetchRequest setEntity:entity];
     
     NSArray *results = [self.managedObjectContext executeFetchRequest:fetchRequest  error:nil];
-    
-   // assert([results count] <2);
     
     return results;
 }
@@ -115,7 +113,7 @@
         error = [NSError errorWithDomain:@"YOUR_ERROR_DOMAIN" code:9999 userInfo:dict];
         // Replace this with code to handle the error appropriately.
         // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-        CoreDataLog(@"Unresolved error", error, [error userInfo], nil);
+        NSLog(@"Unresolved error %@ %@", error, [error userInfo]);
         abort();
     }
     
@@ -147,7 +145,7 @@
         if ([managedObjectContext hasChanges] && ![managedObjectContext save:&error]) {
             // Replace this implementation with code to handle the error appropriately.
             // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-            CoreDataLog(@"Unresolved error ", error, [error userInfo], nil);
+            NSLog(@"Unresolved error %@ %@ ", error, [error userInfo]);
             abort();
         }
     }

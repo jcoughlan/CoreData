@@ -21,14 +21,6 @@
     [super viewDidLoad];
     //just need to initialise this
     [GingersnapSession sharedManager];
-    
-   // CoreDataLog(user.auth_token, nil);
-    [[GCRequests sharedManager] getRootWithCallback:^(NSDictionary *jsonData, NSError *error, NSString *rawData) {
-        GingersnapUser* user = [GingersnapUser initWithUser:nil];
-        user.auth_token = @"YOLO";
-        CoreDataLog(user.auth_token, nil);
-    } andHTTPRequestType:AUTOMATED];
-    
 }
 
 - (void)didReceiveMemoryWarning {

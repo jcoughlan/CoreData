@@ -7,6 +7,7 @@
 
 #import "IAThreadSafeManagedObject.h"
 #import "GingersnapSession.h"
+#import "GSCoreDataManager.h"
 #import <objc/runtime.h>
 
 void dynamicSetter(id self, SEL _cmd, id obj);
@@ -17,7 +18,6 @@ void dynamicSetter(id self, SEL _cmd, id obj);
     if (self = [super init]) {
         //myThread = nil;
     }
-    
     return self;
 }
 
@@ -32,11 +32,16 @@ void dynamicSetter(id self, SEL _cmd, id obj);
 }
 
 - (void) awakeFromInsert {
+    dispatch_async([GingersnapSession sharedManager].coreDataQueue, ^{
+
     myThread = [NSThread currentThread];
+    });
 }
 
 - (void) awakeFromFetch {
+    dispatch_async([GingersnapSession sharedManager].coreDataQueue, ^{
     myThread = [NSThread currentThread];
+    });
 }
 
 - (NSThread*) myThread {
@@ -57,7 +62,7 @@ void dynamicSetter(id self, SEL _cmd, id obj);
         dispatch_async([GingersnapSession sharedManager].coreDataQueue, ^{
             [self runInvocationOnCorrectThread:call];
         });
-       // [self performSelector:@selector(runInvocationOnCorrectThread:) onThread:myThread withObject:call waitUntilDone:YES];
+        //[self performSelector:@selector(runInvocationOnCorrectThread:) onThread:myThread withObject:call waitUntilDone:YES];
     }
 }
 
@@ -67,12 +72,12 @@ void dynamicSetter(id self, SEL _cmd, id obj) {
         //XXX:  clunky way to get the property name, but meh...
         NSString* propertyName =  NSStringFromSelector(_cmd);
         propertyName =  [[propertyName componentsSeparatedByString:@"set"] objectAtIndex:1];
-        //CoreDataLog(@"Setting property:  name=%@", propertyName);
-        CoreDataLog(@"Setting property: on thread: ", propertyName, [NSThread currentThread], nil);
+       // NSLog(@"Setting property:%@ on thread %@", propertyName,[NSThread currentThread]);
 
         [self willChangeValueForKey:propertyName];
         [self setPrimitiveValue:obj forKey:propertyName];
         [self didChangeValueForKey:propertyName];
+        NSLog(@"set %@ for property:%@", [obj description], propertyName);
         
     }
     else {
@@ -85,7 +90,9 @@ void dynamicSetter(id self, SEL _cmd, id obj) {
         [call setArgument:&_cmd atIndex:2];
         [call setArgument:&obj atIndex:3];
         
-        [self runInvocationOnCorrectThread:call];
+       // dispatch_async([GingersnapSession sharedManager].coreDataQueue, ^{
+            [self runInvocationOnCorrectThread:call];
+        //});
     }
 }
 
@@ -101,7 +108,7 @@ void dynamicSetter(id self, SEL _cmd, id obj) {
             [properties addObject:[NSString stringWithCString:name encoding:[NSString defaultCStringEncoding]]];
         }
         else {
-            CoreDataLog(@"Found an unnamed property...?", nil);
+            NSLog(@"Found an unnamed property...?");
         }
     }
     free(objcProps);
@@ -110,7 +117,6 @@ void dynamicSetter(id self, SEL _cmd, id obj) {
 }
 
 + (NSString*)propertyNameFromSetter:(SEL)selector {
-    //XXX:  clunky way to get the property name, but meh...
     NSString* targetSel = NSStringFromSelector(selector);
     NSString* propertyNameUpper = [targetSel substringFromIndex:3];  //remove the 'set'
     NSString* firstLetter = [[propertyNameUpper substringToIndex:1] lowercaseString];
@@ -125,7 +131,7 @@ void dynamicSetter(id self, SEL _cmd, id obj) {
     if ([targetSel hasPrefix:@"set"] && [targetSel rangeOfString:@"Primitive"].location == NSNotFound && [targetSel rangeOfString:@":"].location != NSNotFound) {
         NSString* propertyName = [self propertyNameFromSetter:sel];
         if ([[self declaredPropertyNames] containsObject:propertyName]) {
-            CoreDataLog(@"Overriding selector: ", targetSel, nil);
+            NSLog(@"Overriding selector: %@", targetSel);
             class_addMethod([self class], sel, (IMP)dynamicSetter, "v@:@");
             return YES;
         }

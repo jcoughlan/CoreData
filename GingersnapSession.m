@@ -16,17 +16,16 @@
     dispatch_once(&onceToken, ^{
         assert([NSThread isMainThread]);
         sharedMyManager = [[self alloc] init];
-        sharedMyManager.coreDataQueue = dispatch_queue_create("com.gingersnap.cdQ", NULL);
+        sharedMyManager.coreDataQueue = dispatch_get_main_queue();
+
+        //sharedMyManager.coreDataQueue = dispatch_queue_create("com.gingersnap.cdQ", NULL);
         sharedMyManager.apiQueue = dispatch_queue_create("com.gingersnap.apiQ", NULL);
         __block BOOL loaded = false;
-       // dispatch_async(sharedMyManager.coreDataQueue, ^{
+        
+       dispatch_async(sharedMyManager.coreDataQueue, ^{
         [GSCoreDataManager sharedManager];
             loaded = true;
-        //});
-//        while (!loaded)
-//        {
-//            
-//        }
+        });
     });
     return sharedMyManager;
 }

@@ -29,6 +29,11 @@
     return self;
 }
 
+-(NSThread*) getCoreDataThread
+{
+    return myThread;
+}
+
 - (id) initWithCoder:(NSCoder *)aDecoder {
     if (self = [super initWithCoder:aDecoder]) {
         myThread = [NSThread currentThread];

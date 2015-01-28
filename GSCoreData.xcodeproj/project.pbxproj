@@ -19,17 +19,29 @@
 		1AAE3CCF1A764F6A0012B181 /* IAThreadSafeManagedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AAE3CCD1A764F6A0012B181 /* IAThreadSafeManagedObject.m */; };
 		1AAFFA701A7682B700549DB5 /* GSCoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AAFFA6F1A7682B700549DB5 /* GSCoreDataManager.m */; };
 		1AAFFA761A76957E00549DB5 /* GingersnapSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AAFFA751A76957E00549DB5 /* GingersnapSession.m */; };
+		1AE9261A1A792171007AB75C /* GingersnapActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AE926191A792171007AB75C /* GingersnapActivity.m */; };
+		1AE9261D1A792172007AB75C /* GingersnapChild.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AE9261C1A792172007AB75C /* GingersnapChild.m */; };
+		1AE926201A792172007AB75C /* GingersnapGrandparent.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AE9261F1A792172007AB75C /* GingersnapGrandparent.m */; };
+		1AE926231A792172007AB75C /* GingersnapUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AE926221A792172007AB75C /* GingersnapUser.m */; };
+		1AE926261A792172007AB75C /* GingersnapEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AE926251A792172007AB75C /* GingersnapEvent.m */; };
+		1AE926291A792172007AB75C /* GingersnapImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AE926281A792172007AB75C /* GingersnapImage.m */; };
+		1AE9262C1A792173007AB75C /* GingersnapActivityTemplate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AE9262B1A792173007AB75C /* GingersnapActivityTemplate.m */; };
+		1AE9262F1A792173007AB75C /* GingersnapAvatar.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AE9262E1A792173007AB75C /* GingersnapAvatar.m */; };
+		1AE926321A792173007AB75C /* GingersnapConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AE926311A792173007AB75C /* GingersnapConnection.m */; };
+		1AE926351A792173007AB75C /* GingersnapParent.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AE926341A792173007AB75C /* GingersnapParent.m */; };
+		1AE926381A792173007AB75C /* GingersnapRelationship.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AE926371A792173007AB75C /* GingersnapRelationship.m */; };
+		1AE9263B1A792173007AB75C /* GingersnapShare.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AE9263A1A792173007AB75C /* GingersnapShare.m */; };
 		1AEBE3CC1A77DE4B00CDF4F8 /* HTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AEBE3CB1A77DE4B00CDF4F8 /* HTTPRequest.m */; };
 		1AEBE3D01A77DE7D00CDF4F8 /* HTTPRequests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AEBE3CF1A77DE7D00CDF4F8 /* HTTPRequests.m */; };
 		1AEBE3D31A77DE8F00CDF4F8 /* GPRequests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AEBE3D21A77DE8F00CDF4F8 /* GPRequests.m */; };
 		1AEBE3D61A77DE9F00CDF4F8 /* GCRequests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AEBE3D51A77DE9F00CDF4F8 /* GCRequests.m */; };
 		1AEBE3DA1A77E37900CDF4F8 /* GingersnapCDModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1AEBE3D81A77E37900CDF4F8 /* GingersnapCDModel.xcdatamodeld */; };
-		1AEBE3DD1A77E3DB00CDF4F8 /* GingersnapUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AEBE3DC1A77E3DB00CDF4F8 /* GingersnapUser.m */; };
+		1AEBE3DD1A77E3DB00CDF4F8 /* GingersnapUserYOLO.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AEBE3DC1A77E3DB00CDF4F8 /* GingersnapUserYOLO.m */; };
 		1AEBE3E31A77E72200CDF4F8 /* GingersnapManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AEBE3E21A77E72200CDF4F8 /* GingersnapManager.m */; };
 		1AEBE3E71A77E74B00CDF4F8 /* GPAppManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AEBE3E61A77E74B00CDF4F8 /* GPAppManager.m */; };
 		1AEBE3EA1A77E75900CDF4F8 /* GCAppManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AEBE3E91A77E75900CDF4F8 /* GCAppManager.m */; };
-		1AEBE3ED1A77E92C00CDF4F8 /* GingersnapImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AEBE3EC1A77E92C00CDF4F8 /* GingersnapImage.m */; };
 		1AEBE3F01A77E9D900CDF4F8 /* GingersnapImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AEBE3EF1A77E9D900CDF4F8 /* GingersnapImageManager.m */; };
+		34CF2D2FA21DC8CFB8B33E5A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AD7582C9273F5DA9171EDAF3 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,7 +58,7 @@
 		1A11232A1A76522F00A35B33 /* GSThreadSafeManagedObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSThreadSafeManagedObject.h; sourceTree = "<group>"; };
 		1A11232B1A76522F00A35B33 /* GSThreadSafeManagedObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSThreadSafeManagedObject.m; sourceTree = "<group>"; };
 		1A11232E1A7652D900A35B33 /* GingersnapEntities.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GingersnapEntities.h; sourceTree = "<group>"; };
-		1AAE3C9D1A764EBC0012B181 /* GSCoreData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GSCoreData.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1AAE3C9D1A764EBC0012B181 /* grandparent.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = grandparent.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AAE3CA11A764EBC0012B181 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1AAE3CA21A764EBC0012B181 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1AAE3CA41A764EBC0012B181 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -67,6 +79,30 @@
 		1AAFFA6F1A7682B700549DB5 /* GSCoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GSCoreDataManager.m; path = GSCoreData/GSCoreDataManager.m; sourceTree = "<group>"; };
 		1AAFFA741A76957E00549DB5 /* GingersnapSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GingersnapSession.h; sourceTree = "<group>"; };
 		1AAFFA751A76957E00549DB5 /* GingersnapSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GingersnapSession.m; sourceTree = "<group>"; };
+		1AE926181A792171007AB75C /* GingersnapActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GingersnapActivity.h; sourceTree = "<group>"; };
+		1AE926191A792171007AB75C /* GingersnapActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GingersnapActivity.m; sourceTree = "<group>"; };
+		1AE9261B1A792172007AB75C /* GingersnapChild.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GingersnapChild.h; sourceTree = "<group>"; };
+		1AE9261C1A792172007AB75C /* GingersnapChild.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GingersnapChild.m; sourceTree = "<group>"; };
+		1AE9261E1A792172007AB75C /* GingersnapGrandparent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GingersnapGrandparent.h; sourceTree = "<group>"; };
+		1AE9261F1A792172007AB75C /* GingersnapGrandparent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GingersnapGrandparent.m; sourceTree = "<group>"; };
+		1AE926211A792172007AB75C /* GingersnapUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GingersnapUser.h; sourceTree = "<group>"; };
+		1AE926221A792172007AB75C /* GingersnapUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GingersnapUser.m; sourceTree = "<group>"; };
+		1AE926241A792172007AB75C /* GingersnapEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GingersnapEvent.h; sourceTree = "<group>"; };
+		1AE926251A792172007AB75C /* GingersnapEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GingersnapEvent.m; sourceTree = "<group>"; };
+		1AE926271A792172007AB75C /* GingersnapImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GingersnapImage.h; sourceTree = "<group>"; };
+		1AE926281A792172007AB75C /* GingersnapImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GingersnapImage.m; sourceTree = "<group>"; };
+		1AE9262A1A792172007AB75C /* GingersnapActivityTemplate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GingersnapActivityTemplate.h; sourceTree = "<group>"; };
+		1AE9262B1A792173007AB75C /* GingersnapActivityTemplate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GingersnapActivityTemplate.m; sourceTree = "<group>"; };
+		1AE9262D1A792173007AB75C /* GingersnapAvatar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GingersnapAvatar.h; sourceTree = "<group>"; };
+		1AE9262E1A792173007AB75C /* GingersnapAvatar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GingersnapAvatar.m; sourceTree = "<group>"; };
+		1AE926301A792173007AB75C /* GingersnapConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GingersnapConnection.h; sourceTree = "<group>"; };
+		1AE926311A792173007AB75C /* GingersnapConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GingersnapConnection.m; sourceTree = "<group>"; };
+		1AE926331A792173007AB75C /* GingersnapParent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GingersnapParent.h; sourceTree = "<group>"; };
+		1AE926341A792173007AB75C /* GingersnapParent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GingersnapParent.m; sourceTree = "<group>"; };
+		1AE926361A792173007AB75C /* GingersnapRelationship.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GingersnapRelationship.h; sourceTree = "<group>"; };
+		1AE926371A792173007AB75C /* GingersnapRelationship.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GingersnapRelationship.m; sourceTree = "<group>"; };
+		1AE926391A792173007AB75C /* GingersnapShare.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GingersnapShare.h; sourceTree = "<group>"; };
+		1AE9263A1A792173007AB75C /* GingersnapShare.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GingersnapShare.m; sourceTree = "<group>"; };
 		1AEBE3CA1A77DE4B00CDF4F8 /* HTTPRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPRequest.h; sourceTree = "<group>"; };
 		1AEBE3CB1A77DE4B00CDF4F8 /* HTTPRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTPRequest.m; sourceTree = "<group>"; };
 		1AEBE3CE1A77DE7D00CDF4F8 /* HTTPRequests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPRequests.h; sourceTree = "<group>"; };
@@ -77,18 +113,19 @@
 		1AEBE3D51A77DE9F00CDF4F8 /* GCRequests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCRequests.m; sourceTree = "<group>"; };
 		1AEBE3D71A77E07900CDF4F8 /* HTTPConsts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPConsts.h; sourceTree = "<group>"; };
 		1AEBE3D91A77E37900CDF4F8 /* GingersnapCDModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GingersnapCDModel.xcdatamodel; sourceTree = "<group>"; };
-		1AEBE3DB1A77E3DB00CDF4F8 /* GingersnapUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GingersnapUser.h; sourceTree = "<group>"; };
-		1AEBE3DC1A77E3DB00CDF4F8 /* GingersnapUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GingersnapUser.m; sourceTree = "<group>"; };
+		1AEBE3DB1A77E3DB00CDF4F8 /* GingersnapUserYOLO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GingersnapUserYOLO.h; sourceTree = "<group>"; };
+		1AEBE3DC1A77E3DB00CDF4F8 /* GingersnapUserYOLO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GingersnapUserYOLO.m; sourceTree = "<group>"; };
 		1AEBE3E11A77E72200CDF4F8 /* GingersnapManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GingersnapManager.h; sourceTree = "<group>"; };
 		1AEBE3E21A77E72200CDF4F8 /* GingersnapManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GingersnapManager.m; sourceTree = "<group>"; };
 		1AEBE3E51A77E74B00CDF4F8 /* GPAppManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPAppManager.h; sourceTree = "<group>"; };
 		1AEBE3E61A77E74B00CDF4F8 /* GPAppManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPAppManager.m; sourceTree = "<group>"; };
 		1AEBE3E81A77E75900CDF4F8 /* GCAppManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCAppManager.h; sourceTree = "<group>"; };
 		1AEBE3E91A77E75900CDF4F8 /* GCAppManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCAppManager.m; sourceTree = "<group>"; };
-		1AEBE3EB1A77E92C00CDF4F8 /* GingersnapImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GingersnapImage.h; sourceTree = "<group>"; };
-		1AEBE3EC1A77E92C00CDF4F8 /* GingersnapImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GingersnapImage.m; sourceTree = "<group>"; };
 		1AEBE3EE1A77E9D900CDF4F8 /* GingersnapImageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GingersnapImageManager.h; sourceTree = "<group>"; };
 		1AEBE3EF1A77E9D900CDF4F8 /* GingersnapImageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GingersnapImageManager.m; sourceTree = "<group>"; };
+		AD7582C9273F5DA9171EDAF3 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		B056B4DBA585C28D62832B67 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		CD6F2CE91137EFF4C136642A /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +133,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34CF2D2FA21DC8CFB8B33E5A /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,11 +150,33 @@
 		1A11232D1A76526500A35B33 /* Gingersnap Entities */ = {
 			isa = PBXGroup;
 			children = (
-				1AEBE3EB1A77E92C00CDF4F8 /* GingersnapImage.h */,
-				1AEBE3EC1A77E92C00CDF4F8 /* GingersnapImage.m */,
 				1A11232E1A7652D900A35B33 /* GingersnapEntities.h */,
-				1AEBE3DB1A77E3DB00CDF4F8 /* GingersnapUser.h */,
-				1AEBE3DC1A77E3DB00CDF4F8 /* GingersnapUser.m */,
+				1AEBE3DB1A77E3DB00CDF4F8 /* GingersnapUserYOLO.h */,
+				1AEBE3DC1A77E3DB00CDF4F8 /* GingersnapUserYOLO.m */,
+				1AE926391A792173007AB75C /* GingersnapShare.h */,
+				1AE9263A1A792173007AB75C /* GingersnapShare.m */,
+				1AE926361A792173007AB75C /* GingersnapRelationship.h */,
+				1AE926371A792173007AB75C /* GingersnapRelationship.m */,
+				1AE926331A792173007AB75C /* GingersnapParent.h */,
+				1AE926341A792173007AB75C /* GingersnapParent.m */,
+				1AE926301A792173007AB75C /* GingersnapConnection.h */,
+				1AE926311A792173007AB75C /* GingersnapConnection.m */,
+				1AE9262D1A792173007AB75C /* GingersnapAvatar.h */,
+				1AE9262E1A792173007AB75C /* GingersnapAvatar.m */,
+				1AE9262A1A792172007AB75C /* GingersnapActivityTemplate.h */,
+				1AE9262B1A792173007AB75C /* GingersnapActivityTemplate.m */,
+				1AE926271A792172007AB75C /* GingersnapImage.h */,
+				1AE926281A792172007AB75C /* GingersnapImage.m */,
+				1AE926241A792172007AB75C /* GingersnapEvent.h */,
+				1AE926251A792172007AB75C /* GingersnapEvent.m */,
+				1AE926211A792172007AB75C /* GingersnapUser.h */,
+				1AE926221A792172007AB75C /* GingersnapUser.m */,
+				1AE9261E1A792172007AB75C /* GingersnapGrandparent.h */,
+				1AE9261F1A792172007AB75C /* GingersnapGrandparent.m */,
+				1AE9261B1A792172007AB75C /* GingersnapChild.h */,
+				1AE9261C1A792172007AB75C /* GingersnapChild.m */,
+				1AE926181A792171007AB75C /* GingersnapActivity.h */,
+				1AE926191A792171007AB75C /* GingersnapActivity.m */,
 			);
 			name = "Gingersnap Entities";
 			path = GSCoreData;
@@ -130,13 +190,15 @@
 				1AAE3C9F1A764EBC0012B181 /* GSCoreData */,
 				1AAE3CBC1A764EBC0012B181 /* GSCoreDataTests */,
 				1AAE3C9E1A764EBC0012B181 /* Products */,
+				BF8E7A4FBAE11D754286A19F /* Pods */,
+				D42168757438E47E6B0CAAE1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		1AAE3C9E1A764EBC0012B181 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1AAE3C9D1A764EBC0012B181 /* GSCoreData.app */,
+				1AAE3C9D1A764EBC0012B181 /* grandparent.app */,
 				1AAE3CB91A764EBC0012B181 /* GSCoreDataTests.xctest */,
 			);
 			name = Products;
@@ -258,24 +320,43 @@
 			name = "Gingersnap Manager";
 			sourceTree = "<group>";
 		};
+		BF8E7A4FBAE11D754286A19F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B056B4DBA585C28D62832B67 /* Pods.debug.xcconfig */,
+				CD6F2CE91137EFF4C136642A /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D42168757438E47E6B0CAAE1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AD7582C9273F5DA9171EDAF3 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		1AAE3C9C1A764EBC0012B181 /* GSCoreData */ = {
+		1AAE3C9C1A764EBC0012B181 /* YOLO */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1AAE3CC31A764EBC0012B181 /* Build configuration list for PBXNativeTarget "GSCoreData" */;
+			buildConfigurationList = 1AAE3CC31A764EBC0012B181 /* Build configuration list for PBXNativeTarget "YOLO" */;
 			buildPhases = (
+				FD0BB8A7BEB362999BC1131F /* Check Pods Manifest.lock */,
 				1AAE3C991A764EBC0012B181 /* Sources */,
 				1AAE3C9A1A764EBC0012B181 /* Frameworks */,
 				1AAE3C9B1A764EBC0012B181 /* Resources */,
+				EB526A479DBDC237444F5035 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = GSCoreData;
+			name = YOLO;
 			productName = GSCoreData;
-			productReference = 1AAE3C9D1A764EBC0012B181 /* GSCoreData.app */;
+			productReference = 1AAE3C9D1A764EBC0012B181 /* grandparent.app */;
 			productType = "com.apple.product-type.application";
 		};
 		1AAE3CB81A764EBC0012B181 /* GSCoreDataTests */ = {
@@ -307,6 +388,7 @@
 				TargetAttributes = {
 					1AAE3C9C1A764EBC0012B181 = {
 						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = 27ZSE89AL9;
 					};
 					1AAE3CB81A764EBC0012B181 = {
 						CreatedOnToolsVersion = 6.2;
@@ -327,7 +409,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1AAE3C9C1A764EBC0012B181 /* GSCoreData */,
+				1AAE3C9C1A764EBC0012B181 /* YOLO */,
 				1AAE3CB81A764EBC0012B181 /* GSCoreDataTests */,
 			);
 		};
@@ -353,30 +435,74 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		EB526A479DBDC237444F5035 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FD0BB8A7BEB362999BC1131F /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		1AAE3C991A764EBC0012B181 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1AE926381A792173007AB75C /* GingersnapRelationship.m in Sources */,
 				1AEBE3D01A77DE7D00CDF4F8 /* HTTPRequests.m in Sources */,
 				1AEBE3D61A77DE9F00CDF4F8 /* GCRequests.m in Sources */,
 				1AAFFA701A7682B700549DB5 /* GSCoreDataManager.m in Sources */,
 				1AEBE3D31A77DE8F00CDF4F8 /* GPRequests.m in Sources */,
 				1AEBE3CC1A77DE4B00CDF4F8 /* HTTPRequest.m in Sources */,
+				1AE926291A792172007AB75C /* GingersnapImage.m in Sources */,
 				1AEBE3EA1A77E75900CDF4F8 /* GCAppManager.m in Sources */,
 				1AAE3CA61A764EBC0012B181 /* AppDelegate.m in Sources */,
 				1AAFFA761A76957E00549DB5 /* GingersnapSession.m in Sources */,
 				1A11232C1A76522F00A35B33 /* GSThreadSafeManagedObject.m in Sources */,
+				1AE926261A792172007AB75C /* GingersnapEvent.m in Sources */,
 				1AEBE3E31A77E72200CDF4F8 /* GingersnapManager.m in Sources */,
-				1AEBE3DD1A77E3DB00CDF4F8 /* GingersnapUser.m in Sources */,
+				1AE926201A792172007AB75C /* GingersnapGrandparent.m in Sources */,
+				1AE9261D1A792172007AB75C /* GingersnapChild.m in Sources */,
+				1AE926231A792172007AB75C /* GingersnapUser.m in Sources */,
+				1AEBE3DD1A77E3DB00CDF4F8 /* GingersnapUserYOLO.m in Sources */,
+				1AE9263B1A792173007AB75C /* GingersnapShare.m in Sources */,
 				1AEBE3DA1A77E37900CDF4F8 /* GingersnapCDModel.xcdatamodeld in Sources */,
+				1AE926321A792173007AB75C /* GingersnapConnection.m in Sources */,
 				1AAE3CAC1A764EBC0012B181 /* ViewController.m in Sources */,
 				1AEBE3E71A77E74B00CDF4F8 /* GPAppManager.m in Sources */,
 				1AAE3CA31A764EBC0012B181 /* main.m in Sources */,
 				1AAE3CCE1A764F6A0012B181 /* IAThreadSafeContext.m in Sources */,
 				1AAE3CCF1A764F6A0012B181 /* IAThreadSafeManagedObject.m in Sources */,
+				1AE9262C1A792173007AB75C /* GingersnapActivityTemplate.m in Sources */,
 				1AEBE3F01A77E9D900CDF4F8 /* GingersnapImageManager.m in Sources */,
-				1AEBE3ED1A77E92C00CDF4F8 /* GingersnapImage.m in Sources */,
+				1AE926351A792173007AB75C /* GingersnapParent.m in Sources */,
+				1AE9262F1A792173007AB75C /* GingersnapAvatar.m in Sources */,
+				1AE9261A1A792171007AB75C /* GingersnapActivity.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -393,7 +519,7 @@
 /* Begin PBXTargetDependency section */
 		1AAE3CBB1A764EBC0012B181 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 1AAE3C9C1A764EBC0012B181 /* GSCoreData */;
+			target = 1AAE3C9C1A764EBC0012B181 /* YOLO */;
 			targetProxy = 1AAE3CBA1A764EBC0012B181 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -496,8 +622,10 @@
 		};
 		1AAE3CC41A764EBC0012B181 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B056B4DBA585C28D62832B67 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = GSCoreData/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -506,8 +634,10 @@
 		};
 		1AAE3CC51A764EBC0012B181 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CD6F2CE91137EFF4C136642A /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = GSCoreData/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -560,7 +690,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1AAE3CC31A764EBC0012B181 /* Build configuration list for PBXNativeTarget "GSCoreData" */ = {
+		1AAE3CC31A764EBC0012B181 /* Build configuration list for PBXNativeTarget "YOLO" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1AAE3CC41A764EBC0012B181 /* Debug */,

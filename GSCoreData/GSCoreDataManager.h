@@ -10,7 +10,7 @@
 #import "../IAThreadSafeContext.h"
 #import "../GSThreadSafeManagedObject.h"
 
-void CoreDataLog(NSString* string1,...);
+//void NSLog(NSString* string1,...);
 
 @interface GSCoreDataManager : NSObject
 @property (readonly, strong, nonatomic) IAThreadSafeContext *managedObjectContext;

@@ -14,4 +14,5 @@
     NSThread* myThread;
 }
 
+-(NSThread*) getCoreDataThread;
 @end
