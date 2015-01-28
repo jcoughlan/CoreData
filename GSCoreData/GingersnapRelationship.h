@@ -14,6 +14,8 @@
 
 @interface GingersnapRelationship : IAThreadSafeManagedObject
 
++(void) initWithIdentifier:(NSNumber*)identifier andCallback:(ObjectAddedCompletionBlock)callback;
+
 @property (nonatomic, retain) NSNumber * identifier;
 @property (nonatomic, retain) GingersnapChild *child;
 @property (nonatomic, retain) GingersnapGrandparent *grandparent;

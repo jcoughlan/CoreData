@@ -21,6 +21,17 @@
     [super viewDidLoad];
     //just need to initialise this
     [GingersnapSession sharedManager];
+    
+    
+    dispatch_async([GingersnapSession sharedManager].coreDataQueue, ^{
+        for (int i = 0; i < 1; i++)
+        {
+            [GingersnapActivity initWithIdentifier:[NSNumber numberWithInt:i ] andCallback:^(id object) {
+                
+            }];
+        }
+    });
+  
 }
 
 - (void)didReceiveMemoryWarning {

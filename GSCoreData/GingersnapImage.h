@@ -10,14 +10,17 @@
 #import <CoreData/CoreData.h>
 #import "../GSThreadSafeManagedObject.h"
 
+@class GingersnapAvatar;
 
 @interface GingersnapImage : IAThreadSafeManagedObject
+
++(void) initWithIdentifier:(NSString*)identifier andCallback:(ObjectAddedCompletionBlock)callback;
 
 @property (nonatomic, retain) NSString * identifier;
 @property (nonatomic, retain) NSData * imageData;
 @property (nonatomic, retain) NSDate * lastUsed;
-@property (nonatomic, retain) NSManagedObject *iconAvatar;
-@property (nonatomic, retain) NSManagedObject *thumbnailAvatar;
-@property (nonatomic, retain) NSManagedObject *largeImageAvatar;
+@property (nonatomic, retain) GingersnapAvatar *iconAvatar;
+@property (nonatomic, retain) GingersnapAvatar *thumbnailAvatar;
+@property (nonatomic, retain) GingersnapAvatar *largeImageAvatar;
 
 @end

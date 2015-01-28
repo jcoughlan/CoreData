@@ -14,7 +14,9 @@
 
 @interface GingersnapAvatar : IAThreadSafeManagedObject
 
-@property (nonatomic, retain) NSNumber * indentifier;
++(void) initWithIdentifier:(NSNumber*)identifier andCallback:(ObjectAddedCompletionBlock)callback;
+
+@property (nonatomic, retain) NSNumber * identifier;
 @property (nonatomic, retain) GingersnapChild *child;
 @property (nonatomic, retain) GingersnapImage *icon;
 @property (nonatomic, retain) GingersnapImage *thumbnail;

@@ -21,4 +21,30 @@
 @dynamic status;
 @dynamic child;
 
++(void) initWithIdentifier:(NSNumber*)identifier andCallback:(ObjectAddedCompletionBlock)callback
+{
+    if([NSThread currentThread] == [[[GSCoreDataManager sharedManager] managedObjectContext] getCoreDataThread])
+    {
+        GingersnapShare* gsShare = (GingersnapShare*)[[GSCoreDataManager sharedManager] fetchSingleObjectWithID:identifier andClass:[GingersnapShare class]];
+        
+        if(gsShare)
+            return;
+        
+        gsShare = (GingersnapShare*)[NSEntityDescription insertNewObjectForEntityForName:@"GingersnapShare" inManagedObjectContext:[[GSCoreDataManager sharedManager] managedObjectContext]];
+        gsShare.identifier = identifier;
+        
+        if ([NSThread currentThread] == [NSThread mainThread])
+            callback(gsShare);
+        else
+            dispatch_async(dispatch_get_main_queue(), ^{
+                callback(gsShare);
+            });
+    }
+    else
+        dispatch_async([GingersnapSession sharedManager].coreDataQueue, ^{
+            [GingersnapShare initWithIdentifier:identifier andCallback:callback];
+        });
+}
+
+
 @end

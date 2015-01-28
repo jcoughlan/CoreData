@@ -14,6 +14,8 @@
 
 @interface GingersnapShare : IAThreadSafeManagedObject
 
++(void) initWithIdentifier:(NSNumber*)identifier andCallback:(ObjectAddedCompletionBlock)callback;
+
 @property (nonatomic, retain) NSNumber * identifier;
 @property (nonatomic, retain) NSString * title;
 @property (nonatomic, retain) NSString * subtitle;

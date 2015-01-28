@@ -29,4 +29,29 @@
 @dynamic events;
 @dynamic activityTemplates;
 
++(void) initWithIdentifier:(NSNumber*)identifier andCallback:(ObjectAddedCompletionBlock)callback
+{
+    if([NSThread currentThread] == [[[GSCoreDataManager sharedManager] managedObjectContext] getCoreDataThread])
+    {
+        GingersnapGrandparent* gsGP = (GingersnapGrandparent*)[[GSCoreDataManager sharedManager] fetchSingleObjectWithID:identifier andClass:[GingersnapGrandparent class]];
+        
+        if(gsGP)
+            return;
+        
+        gsGP = (GingersnapGrandparent*)[NSEntityDescription insertNewObjectForEntityForName:@"GingersnapGrandparent" inManagedObjectContext:[[GSCoreDataManager sharedManager] managedObjectContext]];
+        gsGP.identifier = identifier;
+        
+        if ([NSThread currentThread] == [NSThread mainThread])
+            callback(gsGP);
+        else
+            dispatch_async(dispatch_get_main_queue(), ^{
+                callback(gsGP);
+            });
+    }
+    else
+        dispatch_async([GingersnapSession sharedManager].coreDataQueue, ^{
+            [GingersnapGrandparent initWithIdentifier:identifier andCallback:callback];
+        });
+}
+
 @end

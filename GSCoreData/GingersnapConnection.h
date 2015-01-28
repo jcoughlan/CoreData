@@ -10,12 +10,15 @@
 #import <CoreData/CoreData.h>
 #import "../GSThreadSafeManagedObject.h"
 
-@class GingersnapGrandparent;
+@class GingersnapGrandparent, GingersnapParent;
 
 @interface GingersnapConnection : IAThreadSafeManagedObject
 
++(void) initWithIdentifier:(NSNumber*)identifier andCallback:(ObjectAddedCompletionBlock)callback;
+
 @property (nonatomic, retain) NSNumber * identifier;
-@property (nonatomic, retain) GingersnapGrandparent *parent;
-@property (nonatomic, retain) NSManagedObject *grandparent;
+@property (nonatomic, retain) GingersnapParent *parent;
+@property (nonatomic, retain) GingersnapGrandparent *grandparent;
+
 
 @end

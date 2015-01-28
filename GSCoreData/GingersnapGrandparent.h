@@ -10,9 +10,11 @@
 #import <CoreData/CoreData.h>
 #import "../GSThreadSafeManagedObject.h"
 
-@class GingersnapUser;
+@class GingersnapUser, GingersnapAvatar, GingersnapRelationship, GingersnapActivityTemplate, GingersnapParent, GingersnapEvent;
 
 @interface GingersnapGrandparent : IAThreadSafeManagedObject
+
++(void) initWithIdentifier:(NSNumber*)identifier andCallback:(ObjectAddedCompletionBlock)callback;
 
 @property (nonatomic, retain) NSNumber * identifier;
 @property (nonatomic, retain) NSString * email;
@@ -25,7 +27,7 @@
 @property (nonatomic, retain) GingersnapUser *gingersnapUser;
 @property (nonatomic, retain) NSSet *parentConnections;
 @property (nonatomic, retain) NSSet *childRelationships;
-@property (nonatomic, retain) NSManagedObject *profileAvatar;
+@property (nonatomic, retain) GingersnapAvatar *profileAvatar;
 @property (nonatomic, retain) NSSet *avatars;
 @property (nonatomic, retain) NSSet *events;
 @property (nonatomic, retain) NSSet *activityTemplates;
@@ -33,28 +35,28 @@
 
 @interface GingersnapGrandparent (CoreDataGeneratedAccessors)
 
-- (void)addParentConnectionsObject:(NSManagedObject *)value;
-- (void)removeParentConnectionsObject:(NSManagedObject *)value;
+- (void)addParentConnectionsObject:(GingersnapParent *)value;
+- (void)removeParentConnectionsObject:(GingersnapParent *)value;
 - (void)addParentConnections:(NSSet *)values;
 - (void)removeParentConnections:(NSSet *)values;
 
-- (void)addChildRelationshipsObject:(NSManagedObject *)value;
-- (void)removeChildRelationshipsObject:(NSManagedObject *)value;
+- (void)addChildRelationshipsObject:(GingersnapRelationship *)value;
+- (void)removeChildRelationshipsObject:(GingersnapRelationship *)value;
 - (void)addChildRelationships:(NSSet *)values;
 - (void)removeChildRelationships:(NSSet *)values;
 
-- (void)addAvatarsObject:(NSManagedObject *)value;
-- (void)removeAvatarsObject:(NSManagedObject *)value;
+- (void)addAvatarsObject:(GingersnapAvatar *)value;
+- (void)removeAvatarsObject:(GingersnapAvatar *)value;
 - (void)addAvatars:(NSSet *)values;
 - (void)removeAvatars:(NSSet *)values;
 
-- (void)addEventsObject:(NSManagedObject *)value;
-- (void)removeEventsObject:(NSManagedObject *)value;
+- (void)addEventsObject:(GingersnapEvent *)value;
+- (void)removeEventsObject:(GingersnapEvent *)value;
 - (void)addEvents:(NSSet *)values;
 - (void)removeEvents:(NSSet *)values;
 
-- (void)addActivityTemplatesObject:(NSManagedObject *)value;
-- (void)removeActivityTemplatesObject:(NSManagedObject *)value;
+- (void)addActivityTemplatesObject:(GingersnapActivityTemplate *)value;
+- (void)removeActivityTemplatesObject:(GingersnapActivityTemplate *)value;
 - (void)addActivityTemplates:(NSSet *)values;
 - (void)removeActivityTemplates:(NSSet *)values;
 

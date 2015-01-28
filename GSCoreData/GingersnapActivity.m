@@ -29,4 +29,33 @@
 @dynamic child;
 @dynamic activityTemplate;
 
++(void) initWithIdentifier:(NSNumber*)identifier andCallback:(ObjectAddedCompletionBlock)callback
+{
+    if([NSThread currentThread] == [[[GSCoreDataManager sharedManager] managedObjectContext] getCoreDataThread])
+    {
+        NSLog(@"%@", [self class]);
+        GingersnapActivity* gsActivity = (GingersnapActivity*)[[GSCoreDataManager sharedManager] fetchSingleObjectWithID:identifier andClass:[GingersnapActivity class]];
+        
+        if(gsActivity)
+            return;
+        
+        gsActivity = (GingersnapActivity*)[NSEntityDescription insertNewObjectForEntityForName:@"GingersnapActivity" inManagedObjectContext:[[GSCoreDataManager sharedManager] managedObjectContext]];
+        gsActivity.title = @"SWAG";
+        gsActivity.summary = @"YOLO";
+        gsActivity.primary_colour = @"W(@)£@";
+        gsActivity.identifier = [NSNumber numberWithInt:4];
+        gsActivity.identifier = identifier;
+        
+        if ([NSThread currentThread] == [NSThread mainThread])
+            callback(gsActivity);
+        else
+            dispatch_async(dispatch_get_main_queue(), ^{
+                callback(gsActivity);
+            });
+    }
+    else
+        dispatch_async([GingersnapSession sharedManager].coreDataQueue, ^{
+            [GingersnapActivity initWithIdentifier:identifier andCallback:callback];
+        });
+}
 @end

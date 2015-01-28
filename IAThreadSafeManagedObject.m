@@ -70,15 +70,19 @@ void dynamicSetter(id self, SEL _cmd, id obj) {
     if (! [self myThread] || [NSThread currentThread] == [self myThread]) {
         //okay to execute
         //XXX:  clunky way to get the property name, but meh...
+
         NSString* propertyName =  NSStringFromSelector(_cmd);
         propertyName =  [[propertyName componentsSeparatedByString:@"set"] objectAtIndex:1];
+        propertyName = [propertyName stringByReplacingCharactersInRange:NSMakeRange(0,1)
+                                                                  withString:[[propertyName substringToIndex:1] lowercaseString]];
+
        // NSLog(@"Setting property:%@ on thread %@", propertyName,[NSThread currentThread]);
 
         [self willChangeValueForKey:propertyName];
+        NSLog(@"obj type: %@", [self class]);
         [self setPrimitiveValue:obj forKey:propertyName];
         [self didChangeValueForKey:propertyName];
         NSLog(@"set %@ for property:%@", [obj description], propertyName);
-        
     }
     else {
         //call back on the correct thread
@@ -90,9 +94,9 @@ void dynamicSetter(id self, SEL _cmd, id obj) {
         [call setArgument:&_cmd atIndex:2];
         [call setArgument:&obj atIndex:3];
         
-       // dispatch_async([GingersnapSession sharedManager].coreDataQueue, ^{
-            [self runInvocationOnCorrectThread:call];
-        //});
+       dispatch_async([GingersnapSession sharedManager].coreDataQueue, ^{
+        [self runInvocationOnCorrectThread:call];
+        });
     }
 }
 
@@ -131,7 +135,7 @@ void dynamicSetter(id self, SEL _cmd, id obj) {
     if ([targetSel hasPrefix:@"set"] && [targetSel rangeOfString:@"Primitive"].location == NSNotFound && [targetSel rangeOfString:@":"].location != NSNotFound) {
         NSString* propertyName = [self propertyNameFromSetter:sel];
         if ([[self declaredPropertyNames] containsObject:propertyName]) {
-            NSLog(@"Overriding selector: %@", targetSel);
+            NSLog(@"Overriding selector: %@ with propertyNAme: %@" , targetSel, propertyName);
             class_addMethod([self class], sel, (IMP)dynamicSetter, "v@:@");
             return YES;
         }

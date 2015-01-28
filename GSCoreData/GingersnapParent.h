@@ -14,6 +14,8 @@
 
 @interface GingersnapParent : IAThreadSafeManagedObject
 
++(void) initWithIdentifier:(NSNumber*)identifier andCallback:(ObjectAddedCompletionBlock)callback;
+
 @property (nonatomic, retain) NSNumber * identifier;
 @property (nonatomic, retain) NSString * email;
 @property (nonatomic, retain) NSDate * postcode;

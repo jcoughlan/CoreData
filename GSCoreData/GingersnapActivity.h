@@ -10,8 +10,11 @@
 #import <CoreData/CoreData.h>
 #import "../GSThreadSafeManagedObject.h"
 
+@class GingersnapActivityTemplate, GingersnapChild;
 
 @interface GingersnapActivity : IAThreadSafeManagedObject
+
++(void) initWithIdentifier:(NSNumber*)identifier andCallback:(ObjectAddedCompletionBlock)callback;
 
 @property (nonatomic, retain) NSNumber * identifier;
 @property (nonatomic, retain) NSString * title;
@@ -27,7 +30,7 @@
 @property (nonatomic, retain) NSString * unityJson;
 @property (nonatomic, retain) NSString * type;
 @property (nonatomic, retain) NSString * summary;
-@property (nonatomic, retain) NSManagedObject *child;
-@property (nonatomic, retain) NSManagedObject *activityTemplate;
+@property (nonatomic, retain) GingersnapChild *child;
+@property (nonatomic, retain) GingersnapActivityTemplate *activityTemplate;
 
 @end

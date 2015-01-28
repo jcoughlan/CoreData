@@ -10,7 +10,7 @@
 #import <CoreData/CoreData.h>
 #import "../GSThreadSafeManagedObject.h"
 
-@class GingersnapGrandparent;
+@class GingersnapGrandparent, GingersnapParent;
 
 @interface GingersnapUser : IAThreadSafeManagedObject
 
@@ -22,6 +22,6 @@
 @property (nonatomic, retain) NSNumber * has_grandchildren;
 @property (nonatomic, retain) NSNumber * has_sent_adventure;
 @property (nonatomic, retain) GingersnapGrandparent *grandparent;
-@property (nonatomic, retain) NSManagedObject *parent;
+@property (nonatomic, retain) GingersnapParent *parent;
 
 @end

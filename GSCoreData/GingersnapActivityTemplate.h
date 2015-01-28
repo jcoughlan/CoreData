@@ -14,6 +14,8 @@
 
 @interface GingersnapActivityTemplate : IAThreadSafeManagedObject
 
++(void) initWithIdentifier:(NSNumber*)identifier andCallback:(ObjectAddedCompletionBlock)callback;
+
 @property (nonatomic, retain) NSNumber * identifier;
 @property (nonatomic, retain) NSString * status;
 @property (nonatomic, retain) NSString * title;

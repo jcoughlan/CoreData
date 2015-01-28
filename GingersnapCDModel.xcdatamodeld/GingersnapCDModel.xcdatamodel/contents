@@ -4,7 +4,7 @@
         <attribute name="descriptionString" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="has_output" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="header" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="identifier" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="identifier" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="message" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="primary_colour" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="secondary_colour" optional="YES" attributeType="String" syncable="YES"/>
@@ -21,7 +21,7 @@
     <entity name="GingersnapActivityTemplate" representedClassName="GingersnapActivityTemplate" syncable="YES">
         <attribute name="descriptionString" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="header" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="identifier" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="identifier" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="primary_colour" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="secondary_colour" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="status" optional="YES" attributeType="String" syncable="YES"/>
@@ -34,7 +34,7 @@
         <relationship name="grandparent" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="GingersnapGrandparent" inverseName="activityTemplates" inverseEntity="GingersnapGrandparent" syncable="YES"/>
     </entity>
     <entity name="GingersnapAvatar" representedClassName="GingersnapAvatar" syncable="YES">
-        <attribute name="indentifier" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="identifier" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <relationship name="child" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="GingersnapChild" inverseName="profileAvatar" inverseEntity="GingersnapChild" syncable="YES"/>
         <relationship name="grandparentAvatar" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="GingersnapGrandparent" inverseName="profileAvatar" inverseEntity="GingersnapGrandparent" syncable="YES"/>
         <relationship name="grandparentAvatarList" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="GingersnapGrandparent" inverseName="avatars" inverseEntity="GingersnapGrandparent" syncable="YES"/>
@@ -45,7 +45,7 @@
     <entity name="GingersnapChild" representedClassName="GingersnapChild" syncable="YES">
         <attribute name="dateOfBirth" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="firstName" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="identifier" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="identifier" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="isMale" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="lastUpdatedEvents" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="nickname" optional="YES" attributeType="String" syncable="YES"/>
@@ -59,14 +59,14 @@
         <relationship name="shares" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="GingersnapShare" inverseName="child" inverseEntity="GingersnapShare" syncable="YES"/>
     </entity>
     <entity name="GingersnapConnection" representedClassName="GingersnapConnection" syncable="YES">
-        <attribute name="identifier" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
-        <relationship name="grandparent" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="GingersnapParent" inverseName="grandparentConnections" inverseEntity="GingersnapParent" syncable="YES"/>
-        <relationship name="parent" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="GingersnapGrandparent" inverseName="parentConnections" inverseEntity="GingersnapGrandparent" syncable="YES"/>
+        <attribute name="identifier" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <relationship name="grandparent" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="GingersnapGrandparent" inverseName="parentConnections" inverseEntity="GingersnapGrandparent" syncable="YES"/>
+        <relationship name="parent" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="GingersnapParent" inverseName="grandparentConnections" inverseEntity="GingersnapParent" syncable="YES"/>
     </entity>
     <entity name="GingersnapEvent" representedClassName="GingersnapEvent" syncable="YES">
         <attribute name="body" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="header" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="identifier" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="identifier" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="primary_colour" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="secondary_colour" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="status" optional="YES" attributeType="String" syncable="YES"/>
@@ -80,7 +80,7 @@
         <attribute name="dateOfBirth" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="firstName" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="identifier" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="identifier" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="isMale" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="lastName" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="lastUpdatedEvents" optional="YES" attributeType="Date" syncable="YES"/>
@@ -90,7 +90,7 @@
         <relationship name="childRelationships" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="GingersnapRelationship" inverseName="grandparent" inverseEntity="GingersnapRelationship" syncable="YES"/>
         <relationship name="events" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="GingersnapEvent" inverseName="grandparent" inverseEntity="GingersnapEvent" syncable="YES"/>
         <relationship name="gingersnapUser" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="GingersnapUser" inverseName="grandparent" inverseEntity="GingersnapUser" syncable="YES"/>
-        <relationship name="parentConnections" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="GingersnapConnection" inverseName="parent" inverseEntity="GingersnapConnection" syncable="YES"/>
+        <relationship name="parentConnections" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="GingersnapConnection" inverseName="grandparent" inverseEntity="GingersnapConnection" syncable="YES"/>
         <relationship name="profileAvatar" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="GingersnapAvatar" inverseName="grandparentAvatar" inverseEntity="GingersnapAvatar" syncable="YES"/>
     </entity>
     <entity name="GingersnapImage" representedClassName="GingersnapImage" syncable="YES">
@@ -104,20 +104,20 @@
     <entity name="GingersnapParent" representedClassName="GingersnapParent" syncable="YES">
         <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="firstName" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="identifier" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="identifier" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="postcode" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="secondName" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="children" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="GingersnapChild" inverseName="parent" inverseEntity="GingersnapChild" syncable="YES"/>
         <relationship name="gingersnapUser" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="GingersnapUser" inverseName="parent" inverseEntity="GingersnapUser" syncable="YES"/>
-        <relationship name="grandparentConnections" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="GingersnapConnection" inverseName="grandparent" inverseEntity="GingersnapConnection" syncable="YES"/>
+        <relationship name="grandparentConnections" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="GingersnapConnection" inverseName="parent" inverseEntity="GingersnapConnection" syncable="YES"/>
     </entity>
     <entity name="GingersnapRelationship" representedClassName="GingersnapRelationship" syncable="YES">
-        <attribute name="identifier" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="identifier" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <relationship name="child" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="GingersnapChild" inverseName="grandparentRelationships" inverseEntity="GingersnapChild" syncable="YES"/>
         <relationship name="grandparent" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="GingersnapGrandparent" inverseName="childRelationships" inverseEntity="GingersnapGrandparent" syncable="YES"/>
     </entity>
     <entity name="GingersnapShare" representedClassName="GingersnapShare" syncable="YES">
-        <attribute name="identifier" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="identifier" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="message" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="response" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="status" optional="YES" attributeType="String" syncable="YES"/>
@@ -145,7 +145,7 @@
         <element name="GingersnapParent" positionX="-1071" positionY="185" width="128" height="163"/>
         <element name="GingersnapChild" positionX="-1046" positionY="468" width="128" height="253"/>
         <element name="GingersnapGrandparent" positionX="-1073" positionY="-100" width="128" height="268"/>
-        <element name="GingersnapConnection" positionX="-900" positionY="90" width="128" height="88"/>
+        <element name="GingersnapConnection" positionX="-810" positionY="200" width="128" height="88"/>
         <element name="GingersnapRelationship" positionX="-1251" positionY="371" width="128" height="88"/>
     </elements>
 </model>

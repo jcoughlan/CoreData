@@ -131,7 +131,7 @@
     if (!coordinator) {
         return nil;
     }
-    _managedObjectContext = [[IAThreadSafeContext alloc] initWithConcurrencyType:NSPrivateQueueConcurrencyType];
+    _managedObjectContext = [[IAThreadSafeContext alloc] init];
     [_managedObjectContext setPersistentStoreCoordinator:coordinator];
     return _managedObjectContext;
 }

@@ -24,4 +24,30 @@
 @dynamic grandparentConnections;
 @dynamic children;
 
+
++(void) initWithIdentifier:(NSNumber*)identifier andCallback:(ObjectAddedCompletionBlock)callback
+{
+    if([NSThread currentThread] == [[[GSCoreDataManager sharedManager] managedObjectContext] getCoreDataThread])
+    {
+        GingersnapParent* gsParent = (GingersnapParent*)[[GSCoreDataManager sharedManager] fetchSingleObjectWithID:identifier andClass:[GingersnapParent class]];
+        
+        if(gsParent)
+            return;
+        
+        gsParent = (GingersnapParent*)[NSEntityDescription insertNewObjectForEntityForName:@"GingersnapParent" inManagedObjectContext:[[GSCoreDataManager sharedManager] managedObjectContext]];
+        gsParent.identifier = identifier;
+        
+        if ([NSThread currentThread] == [NSThread mainThread])
+            callback(gsParent);
+        else
+            dispatch_async(dispatch_get_main_queue(), ^{
+                callback(gsParent);
+            });
+    }
+    else
+        dispatch_async([GingersnapSession sharedManager].coreDataQueue, ^{
+            [GingersnapParent initWithIdentifier:identifier andCallback:callback];
+        });
+}
+
 @end

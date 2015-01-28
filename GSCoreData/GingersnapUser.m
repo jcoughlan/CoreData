@@ -28,7 +28,6 @@
         //TODO check user exists
         GingersnapUser* gsUser =   (GingersnapUser*)[NSEntityDescription insertNewObjectForEntityForName:@"GingersnapUser" inManagedObjectContext:[[GSCoreDataManager sharedManager] managedObjectContext]];
         gsUser.user = user;
-        gsUser.auth_token = @"original";
         if ([NSThread currentThread] == [NSThread mainThread])
             callback(gsUser);
         else

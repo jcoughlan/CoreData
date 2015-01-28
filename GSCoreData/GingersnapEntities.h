@@ -8,5 +8,16 @@
 
 #ifndef GSCoreData_GingersnapEntities_h
 #define GSCoreData_GingersnapEntities_h
-//#import "GingersnapUser.h"
+#import "GingersnapUser.h"
+#import "GingersnapActivity.h"
+#import "GingersnapActivityTemplate.h"
+#import "GingersnapAvatar.h"
+#import "GingersnapChild.h"
+#import "GingersnapConnection.h"
+#import "GingersnapEvent.h"
+#import "GingersnapImageManager.h"
+#import "GingersnapParent.h"
+#import "GingersnapRelationship.h"
+#import "GingersnapShare.h"
+#import "GingersnapGrandparent.h" 
 #endif
