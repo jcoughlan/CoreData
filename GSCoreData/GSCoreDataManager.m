@@ -52,6 +52,12 @@
     return sharedMyManager;
 }
 
+-(void) deleteObject: (IAThreadSafeManagedObject*)object
+{
+        if(object)
+            [self.managedObjectContext deleteObject:object];
+}
+
 -(NSArray*)fetchObjectsWithClass:(Class)class
 {
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];

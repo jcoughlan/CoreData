@@ -7,7 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "GingersnapAppManager.h"
 
-@interface GrandparentAppManager : NSObject
+@interface GrandparentAppManager : GingersnapAppManager
 
 @end

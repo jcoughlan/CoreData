@@ -22,6 +22,7 @@
 
 -(IAThreadSafeManagedObject*)fetchSingleObjectWithID:(id)identifier andClass:(Class)class;
 
+-(void) deleteObject: (IAThreadSafeManagedObject*)object;
 
 + (GSCoreDataManager*)sharedManager;
 - (void)saveContext;

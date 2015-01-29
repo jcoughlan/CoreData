@@ -11,6 +11,8 @@
 @implementation GCRequests
 
 + (GCRequests*)sharedManager {
+    
+    //TODO check if we are in gc or gp app, in which case done initialiase either this or gpRequests
     static GCRequests *sharedMyManager = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{

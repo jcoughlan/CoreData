@@ -20,6 +20,7 @@
         sharedMyManager.rootData = [[GingersnapRootData alloc] init];
         //sharedMyManager.coreDataQueue = dispatch_queue_create("com.gingersnap.cdQ", NULL);
         sharedMyManager.apiQueue = dispatch_queue_create("com.gingersnap.apiQ", NULL);
+        sharedMyManager.backgroundQueue = dispatch_queue_create("com.gingersnap.backQ", NULL);
         __block BOOL loaded = false;
         
         dispatch_async(sharedMyManager.coreDataQueue, ^{

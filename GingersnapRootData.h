@@ -12,4 +12,6 @@
 
 @property (nonatomic,retain) NSNumber* onboardingAdventureID;
 
+@property (nonatomic, retain) NSMutableArray* grandparentSalutationsMale;
+@property (nonatomic, retain) NSMutableArray* grandparentSalutationsFemale;
 @end

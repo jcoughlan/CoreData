@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #import "GingersnapImage.h"
 
+static const int IMAGE_CACHE_LIMIT = 350;
+
 @interface GingersnapImageManager : NSObject
 
 @property(nonatomic, retain) NSMutableArray* imageArray;

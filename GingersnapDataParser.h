@@ -13,6 +13,10 @@
 
 +(void) parseRootWithData:(NSDictionary*)jsonData andCallback:(ObjectAddedCompletionBlock)callback;
 
++(void) parseSalutationsWithData:(NSDictionary*)jsonData andCallback:(ObjectAddedCompletionBlock)callback;
+
++(void) parseUserWithData:(NSDictionary*)jsonData andCallback:(ObjectAddedCompletionBlock)callback;
+
 +(void) parseEventWithData:(NSDictionary*)jsonData andCallback:(ObjectAddedCompletionBlock)callback;
 +(void) parseEventsWithData:(NSDictionary*)jsonData andCallback:(ObjectAddedCompletionBlock)objectAddedCallback andProcessCompletedCallback:(ProcessCompletedBlock)processCompletedCallback;
 

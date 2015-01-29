@@ -9,6 +9,7 @@
 #import "GingersnapRootData.h"
 
 @implementation GingersnapRootData
-
+@synthesize grandparentSalutationsFemale;
+@synthesize grandparentSalutationsMale;
 @synthesize onboardingAdventureID;
 @end

@@ -19,7 +19,9 @@
 
 @property (readwrite, strong, nonatomic) dispatch_queue_t coreDataQueue;
 @property (readwrite, strong, nonatomic) dispatch_queue_t apiQueue;
+@property (readwrite, strong, nonatomic) dispatch_queue_t backgroundQueue;
 @property (readwrite, strong, nonatomic) GingersnapRootData* rootData;
+@property (readwrite, strong, nonatomic) NSString* deviceToken;
 @property (readwrite, strong, nonatomic) GingersnapUser* user;
 
 @end
