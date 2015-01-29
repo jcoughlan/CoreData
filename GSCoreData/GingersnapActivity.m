@@ -33,17 +33,16 @@
 {
     if([NSThread currentThread] == [[[GSCoreDataManager sharedManager] managedObjectContext] getCoreDataThread])
     {
-        NSLog(@"%@", [self class]);
         GingersnapActivity* gsActivity = (GingersnapActivity*)[[GSCoreDataManager sharedManager] fetchSingleObjectWithID:identifier andClass:[GingersnapActivity class]];
         
         if(gsActivity)
+        {
+            callback(gsActivity);
             return;
+        }
         
         gsActivity = (GingersnapActivity*)[NSEntityDescription insertNewObjectForEntityForName:@"GingersnapActivity" inManagedObjectContext:[[GSCoreDataManager sharedManager] managedObjectContext]];
-        gsActivity.title = @"SWAG";
-        gsActivity.summary = @"YOLO";
-        gsActivity.primary_colour = @"W(@)£@";
-        gsActivity.identifier = [NSNumber numberWithInt:4];
+      
         gsActivity.identifier = identifier;
         
         if ([NSThread currentThread] == [NSThread mainThread])

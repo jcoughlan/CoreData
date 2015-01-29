@@ -26,8 +26,10 @@
         GingersnapImage* gsImage = (GingersnapImage*)[[GSCoreDataManager sharedManager] fetchSingleObjectWithID:identifier andClass:[GingersnapImage class]];
         
         if(gsImage)
+        {
+            callback(gsImage);
             return;
-        
+        }
         gsImage = (GingersnapImage*)[NSEntityDescription insertNewObjectForEntityForName:@"GingersnapImage" inManagedObjectContext:[[GSCoreDataManager sharedManager] managedObjectContext]];
         gsImage.identifier = identifier;
         

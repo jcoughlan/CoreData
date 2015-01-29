@@ -28,7 +28,10 @@
         GingersnapShare* gsShare = (GingersnapShare*)[[GSCoreDataManager sharedManager] fetchSingleObjectWithID:identifier andClass:[GingersnapShare class]];
         
         if(gsShare)
+        {
+            callback(gsShare);
             return;
+        }
         
         gsShare = (GingersnapShare*)[NSEntityDescription insertNewObjectForEntityForName:@"GingersnapShare" inManagedObjectContext:[[GSCoreDataManager sharedManager] managedObjectContext]];
         gsShare.identifier = identifier;

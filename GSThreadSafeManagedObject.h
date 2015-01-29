@@ -9,6 +9,7 @@
 #import "IAThreadSafeManagedObject.h"
 #import "IAThreadSafeContext.h"
 typedef void (^ObjectAddedCompletionBlock)(id object);
+typedef void (^ProcessCompletedBlock)(NSError* error);
 
 @interface GSThreadSafeManagedObject : IAThreadSafeManagedObject
 

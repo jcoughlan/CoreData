@@ -33,8 +33,10 @@
         GingersnapEvent* gsEvent = (GingersnapEvent*)[[GSCoreDataManager sharedManager] fetchSingleObjectWithID:identifier andClass:[GingersnapEvent class]];
         
         if(gsEvent)
+        {
+            callback(gsEvent);
             return;
-        
+        }
         gsEvent = (GingersnapEvent*)[NSEntityDescription insertNewObjectForEntityForName:@"GingersnapEvent" inManagedObjectContext:[[GSCoreDataManager sharedManager] managedObjectContext]];
         gsEvent.identifier = identifier;
         

@@ -22,6 +22,7 @@
 
 -(IAThreadSafeManagedObject*)fetchSingleObjectWithID:(id)identifier andClass:(Class)class;
 
+
 + (GSCoreDataManager*)sharedManager;
 - (void)saveContext;
 - (NSURL *)applicationDocumentsDirectory;

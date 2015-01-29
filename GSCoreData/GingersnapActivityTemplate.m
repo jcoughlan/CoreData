@@ -37,8 +37,10 @@
         GingersnapActivityTemplate* gsActTem = (GingersnapActivityTemplate*)[[GSCoreDataManager sharedManager] fetchSingleObjectWithID:identifier andClass:[GingersnapActivityTemplate class]];
         
         if(gsActTem)
+        {
+            callback(gsActTem);
             return;
-        
+        }
         gsActTem = (GingersnapActivityTemplate*)[NSEntityDescription insertNewObjectForEntityForName:@"GingersnapActivityTemplate" inManagedObjectContext:[[GSCoreDataManager sharedManager] managedObjectContext]];
         gsActTem.identifier = identifier;
         

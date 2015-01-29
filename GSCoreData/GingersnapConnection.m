@@ -24,8 +24,10 @@
         GingersnapConnection* gsConnection = (GingersnapConnection*)[[GSCoreDataManager sharedManager] fetchSingleObjectWithID:identifier andClass:[GingersnapConnection class]];
         
         if(gsConnection)
+        {
+            callback(gsConnection);
             return;
-        
+        }
         gsConnection = (GingersnapConnection*)[NSEntityDescription insertNewObjectForEntityForName:@"GingersnapConnection" inManagedObjectContext:[[GSCoreDataManager sharedManager] managedObjectContext]];
         gsConnection.identifier = identifier;
         

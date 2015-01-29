@@ -23,7 +23,7 @@
 //constructors
 - (id) init {
     if (self = [super init]) {
-        myThread = [NSThread currentThread];
+        myThread = [NSThread mainThread];
     }
     
     return self;

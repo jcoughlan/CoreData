@@ -35,8 +35,10 @@
         GingersnapChild* gsChild = (GingersnapChild*)[[GSCoreDataManager sharedManager] fetchSingleObjectWithID:identifier andClass:[GingersnapChild class]];
         
         if(gsChild)
+        {
+            callback(gsChild);
             return;
-        
+        }
         gsChild = (GingersnapChild*)[NSEntityDescription insertNewObjectForEntityForName:@"GingersnapChild" inManagedObjectContext:[[GSCoreDataManager sharedManager] managedObjectContext]];
         gsChild.identifier = identifier;
         

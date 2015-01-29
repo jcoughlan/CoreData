@@ -22,16 +22,17 @@
     //just need to initialise this
     [GingersnapSession sharedManager];
     
-    
-    dispatch_async([GingersnapSession sharedManager].coreDataQueue, ^{
-        for (int i = 0; i < 1; i++)
+    //dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        for (int i = 0; i < 10; i++)
         {
-            [GingersnapActivity initWithIdentifier:[NSNumber numberWithInt:i ] andCallback:^(id object) {
-                
+            [GingersnapConnection initWithIdentifier:[NSNumber numberWithInt:i ] andCallback:^(id object) {
+                if ([NSThread currentThread] != [NSThread mainThread])
+                {
+                    abort();
+                }
             }];
         }
-    });
-  
+    //});
 }
 
 - (void)didReceiveMemoryWarning {

@@ -31,8 +31,10 @@
         GingersnapAvatar* gsAvatar = (GingersnapAvatar*)[[GSCoreDataManager sharedManager] fetchSingleObjectWithID:identifier andClass:[GingersnapAvatar class]];
         
         if(gsAvatar)
+        {
+            callback(gsAvatar);
             return;
-        
+        }
         gsAvatar = (GingersnapAvatar*)[NSEntityDescription insertNewObjectForEntityForName:@"GingersnapAvatar" inManagedObjectContext:[[GSCoreDataManager sharedManager] managedObjectContext]];
         gsAvatar.identifier = identifier;
         

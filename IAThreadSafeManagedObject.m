@@ -72,14 +72,11 @@ void dynamicSetter(id self, SEL _cmd, id obj) {
         //XXX:  clunky way to get the property name, but meh...
 
         NSString* propertyName =  NSStringFromSelector(_cmd);
-        propertyName =  [[propertyName componentsSeparatedByString:@"set"] objectAtIndex:1];
-        propertyName = [propertyName stringByReplacingCharactersInRange:NSMakeRange(0,1)
-                                                                  withString:[[propertyName substringToIndex:1] lowercaseString]];
+        propertyName = [IAThreadSafeManagedObject propertyNameFromSetterWithString:propertyName];
 
        // NSLog(@"Setting property:%@ on thread %@", propertyName,[NSThread currentThread]);
 
         [self willChangeValueForKey:propertyName];
-        NSLog(@"obj type: %@", [self class]);
         [self setPrimitiveValue:obj forKey:propertyName];
         [self didChangeValueForKey:propertyName];
         NSLog(@"set %@ for property:%@", [obj description], propertyName);
@@ -130,6 +127,15 @@ void dynamicSetter(id self, SEL _cmd, id obj) {
     return propertyName;
 }
 
++ (NSString*)propertyNameFromSetterWithString:(NSString*)setter {
+    NSString* targetSel = setter;
+    NSString* propertyNameUpper = [targetSel substringFromIndex:3];  //remove the 'set'
+    NSString* firstLetter = [[propertyNameUpper substringToIndex:1] lowercaseString];
+    NSString* propertyName = [NSString stringWithFormat:@"%@%@", firstLetter, [propertyNameUpper substringFromIndex:1]];
+    propertyName = [propertyName substringToIndex:[propertyName length] - 1];   //remove the trailing ':'
+    
+    return propertyName;
+}
 + (BOOL) resolveInstanceMethod:(SEL)sel {
     NSString* targetSel = NSStringFromSelector(sel);
     if ([targetSel hasPrefix:@"set"] && [targetSel rangeOfString:@"Primitive"].location == NSNotFound && [targetSel rangeOfString:@":"].location != NSNotFound) {

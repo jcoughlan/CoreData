@@ -8,6 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		1A11232C1A76522F00A35B33 /* GSThreadSafeManagedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A11232B1A76522F00A35B33 /* GSThreadSafeManagedObject.m */; };
+		1A5861841A7A433C00387857 /* GingersnapDataParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A5861831A7A433C00387857 /* GingersnapDataParser.m */; };
+		1A5861871A7A438000387857 /* GingersnapRootData.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A5861861A7A438000387857 /* GingersnapRootData.m */; };
+		1A5861891A7A486F00387857 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A5861881A7A486F00387857 /* UIKit.framework */; };
+		1A58618B1A7A487600387857 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A58618A1A7A487600387857 /* MessageUI.framework */; };
+		1A58618F1A7A492700387857 /* AmazonS3Manager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A58618E1A7A492700387857 /* AmazonS3Manager.m */; };
+		1A5861921A7A493B00387857 /* AWSSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A5861911A7A493B00387857 /* AWSSettings.m */; };
+		1A5861951A7A49A900387857 /* AWSRuntime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A5861931A7A49A900387857 /* AWSRuntime.framework */; };
+		1A5861961A7A49A900387857 /* AWSS3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A5861941A7A49A900387857 /* AWSS3.framework */; };
+		1A58619C1A7A4BBC00387857 /* ParentAppManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A58619B1A7A4BBC00387857 /* ParentAppManager.m */; };
+		1A58619F1A7A4BCA00387857 /* GrandparentAppManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A58619E1A7A4BCA00387857 /* GrandparentAppManager.m */; };
 		1AAE3CA31A764EBC0012B181 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AAE3CA21A764EBC0012B181 /* main.m */; };
 		1AAE3CA61A764EBC0012B181 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AAE3CA51A764EBC0012B181 /* AppDelegate.m */; };
 		1AAE3CAC1A764EBC0012B181 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AAE3CAB1A764EBC0012B181 /* ViewController.m */; };
@@ -36,7 +46,6 @@
 		1AEBE3D31A77DE8F00CDF4F8 /* GPRequests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AEBE3D21A77DE8F00CDF4F8 /* GPRequests.m */; };
 		1AEBE3D61A77DE9F00CDF4F8 /* GCRequests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AEBE3D51A77DE9F00CDF4F8 /* GCRequests.m */; };
 		1AEBE3DA1A77E37900CDF4F8 /* GingersnapCDModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1AEBE3D81A77E37900CDF4F8 /* GingersnapCDModel.xcdatamodeld */; };
-		1AEBE3DD1A77E3DB00CDF4F8 /* GingersnapUserYOLO.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AEBE3DC1A77E3DB00CDF4F8 /* GingersnapUserYOLO.m */; };
 		1AEBE3E31A77E72200CDF4F8 /* GingersnapManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AEBE3E21A77E72200CDF4F8 /* GingersnapManager.m */; };
 		1AEBE3E71A77E74B00CDF4F8 /* GPAppManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AEBE3E61A77E74B00CDF4F8 /* GPAppManager.m */; };
 		1AEBE3EA1A77E75900CDF4F8 /* GCAppManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AEBE3E91A77E75900CDF4F8 /* GCAppManager.m */; };
@@ -58,7 +67,23 @@
 		1A11232A1A76522F00A35B33 /* GSThreadSafeManagedObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSThreadSafeManagedObject.h; sourceTree = "<group>"; };
 		1A11232B1A76522F00A35B33 /* GSThreadSafeManagedObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSThreadSafeManagedObject.m; sourceTree = "<group>"; };
 		1A11232E1A7652D900A35B33 /* GingersnapEntities.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GingersnapEntities.h; sourceTree = "<group>"; };
-		1AAE3C9D1A764EBC0012B181 /* grandparent.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = grandparent.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1A5861821A7A433C00387857 /* GingersnapDataParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GingersnapDataParser.h; sourceTree = "<group>"; };
+		1A5861831A7A433C00387857 /* GingersnapDataParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GingersnapDataParser.m; sourceTree = "<group>"; };
+		1A5861851A7A438000387857 /* GingersnapRootData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GingersnapRootData.h; sourceTree = "<group>"; };
+		1A5861861A7A438000387857 /* GingersnapRootData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GingersnapRootData.m; sourceTree = "<group>"; };
+		1A5861881A7A486F00387857 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		1A58618A1A7A487600387857 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		1A58618D1A7A492700387857 /* AmazonS3Manager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AmazonS3Manager.h; sourceTree = "<group>"; };
+		1A58618E1A7A492700387857 /* AmazonS3Manager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AmazonS3Manager.m; sourceTree = "<group>"; };
+		1A5861901A7A493B00387857 /* AWSSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AWSSettings.h; sourceTree = "<group>"; };
+		1A5861911A7A493B00387857 /* AWSSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AWSSettings.m; sourceTree = "<group>"; };
+		1A5861931A7A49A900387857 /* AWSRuntime.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AWSRuntime.framework; sourceTree = "<group>"; };
+		1A5861941A7A49A900387857 /* AWSS3.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AWSS3.framework; sourceTree = "<group>"; };
+		1A58619A1A7A4BBC00387857 /* ParentAppManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParentAppManager.h; sourceTree = "<group>"; };
+		1A58619B1A7A4BBC00387857 /* ParentAppManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParentAppManager.m; sourceTree = "<group>"; };
+		1A58619D1A7A4BCA00387857 /* GrandparentAppManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GrandparentAppManager.h; sourceTree = "<group>"; };
+		1A58619E1A7A4BCA00387857 /* GrandparentAppManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GrandparentAppManager.m; sourceTree = "<group>"; };
+		1AAE3C9D1A764EBC0012B181 /* GSCoreData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GSCoreData.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AAE3CA11A764EBC0012B181 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1AAE3CA21A764EBC0012B181 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1AAE3CA41A764EBC0012B181 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -113,8 +138,6 @@
 		1AEBE3D51A77DE9F00CDF4F8 /* GCRequests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCRequests.m; sourceTree = "<group>"; };
 		1AEBE3D71A77E07900CDF4F8 /* HTTPConsts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPConsts.h; sourceTree = "<group>"; };
 		1AEBE3D91A77E37900CDF4F8 /* GingersnapCDModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GingersnapCDModel.xcdatamodel; sourceTree = "<group>"; };
-		1AEBE3DB1A77E3DB00CDF4F8 /* GingersnapUserYOLO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GingersnapUserYOLO.h; sourceTree = "<group>"; };
-		1AEBE3DC1A77E3DB00CDF4F8 /* GingersnapUserYOLO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GingersnapUserYOLO.m; sourceTree = "<group>"; };
 		1AEBE3E11A77E72200CDF4F8 /* GingersnapManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GingersnapManager.h; sourceTree = "<group>"; };
 		1AEBE3E21A77E72200CDF4F8 /* GingersnapManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GingersnapManager.m; sourceTree = "<group>"; };
 		1AEBE3E51A77E74B00CDF4F8 /* GPAppManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPAppManager.h; sourceTree = "<group>"; };
@@ -133,7 +156,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A58618B1A7A487600387857 /* MessageUI.framework in Frameworks */,
+				1A5861891A7A486F00387857 /* UIKit.framework in Frameworks */,
 				34CF2D2FA21DC8CFB8B33E5A /* libPods.a in Frameworks */,
+				1A5861951A7A49A900387857 /* AWSRuntime.framework in Frameworks */,
+				1A5861961A7A49A900387857 /* AWSS3.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -151,8 +178,6 @@
 			isa = PBXGroup;
 			children = (
 				1A11232E1A7652D900A35B33 /* GingersnapEntities.h */,
-				1AEBE3DB1A77E3DB00CDF4F8 /* GingersnapUserYOLO.h */,
-				1AEBE3DC1A77E3DB00CDF4F8 /* GingersnapUserYOLO.m */,
 				1AE926391A792173007AB75C /* GingersnapShare.h */,
 				1AE9263A1A792173007AB75C /* GingersnapShare.m */,
 				1AE926361A792173007AB75C /* GingersnapRelationship.h */,
@@ -182,6 +207,46 @@
 			path = GSCoreData;
 			sourceTree = "<group>";
 		};
+		1A58618C1A7A490A00387857 /* AmazonS3 */ = {
+			isa = PBXGroup;
+			children = (
+				1A58618D1A7A492700387857 /* AmazonS3Manager.h */,
+				1A58618E1A7A492700387857 /* AmazonS3Manager.m */,
+				1A5861901A7A493B00387857 /* AWSSettings.h */,
+				1A5861911A7A493B00387857 /* AWSSettings.m */,
+			);
+			name = AmazonS3;
+			sourceTree = "<group>";
+		};
+		1A5861971A7A4B7200387857 /* Data Logic */ = {
+			isa = PBXGroup;
+			children = (
+				1A5861821A7A433C00387857 /* GingersnapDataParser.h */,
+				1A5861831A7A433C00387857 /* GingersnapDataParser.m */,
+				1A5861851A7A438000387857 /* GingersnapRootData.h */,
+				1A5861861A7A438000387857 /* GingersnapRootData.m */,
+			);
+			name = "Data Logic";
+			sourceTree = "<group>";
+		};
+		1A5861981A7A4B9400387857 /* GrandparentApp */ = {
+			isa = PBXGroup;
+			children = (
+				1A58619D1A7A4BCA00387857 /* GrandparentAppManager.h */,
+				1A58619E1A7A4BCA00387857 /* GrandparentAppManager.m */,
+			);
+			name = GrandparentApp;
+			sourceTree = "<group>";
+		};
+		1A5861991A7A4B9E00387857 /* ParentApp */ = {
+			isa = PBXGroup;
+			children = (
+				1A58619A1A7A4BBC00387857 /* ParentAppManager.h */,
+				1A58619B1A7A4BBC00387857 /* ParentAppManager.m */,
+			);
+			name = ParentApp;
+			sourceTree = "<group>";
+		};
 		1AAE3C941A764EBC0012B181 = {
 			isa = PBXGroup;
 			children = (
@@ -198,7 +263,7 @@
 		1AAE3C9E1A764EBC0012B181 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1AAE3C9D1A764EBC0012B181 /* grandparent.app */,
+				1AAE3C9D1A764EBC0012B181 /* GSCoreData.app */,
 				1AAE3CB91A764EBC0012B181 /* GSCoreDataTests.xctest */,
 			);
 			name = Products;
@@ -261,6 +326,7 @@
 		1AEBE3CD1A77DE5700CDF4F8 /* HTTP */ = {
 			isa = PBXGroup;
 			children = (
+				1A58618C1A7A490A00387857 /* AmazonS3 */,
 				1AEBE3D71A77E07900CDF4F8 /* HTTPConsts.h */,
 				1AEBE3CA1A77DE4B00CDF4F8 /* HTTPRequest.h */,
 				1AEBE3CB1A77DE4B00CDF4F8 /* HTTPRequest.m */,
@@ -277,6 +343,8 @@
 		1AEBE3DE1A77E67300CDF4F8 /* Gingersnap */ = {
 			isa = PBXGroup;
 			children = (
+				1AAFFA741A76957E00549DB5 /* GingersnapSession.h */,
+				1AAFFA751A76957E00549DB5 /* GingersnapSession.m */,
 				1AEBE3DF1A77E69100CDF4F8 /* Gingersnap CoreData */,
 			);
 			name = Gingersnap;
@@ -288,8 +356,6 @@
 				1AAE3CC91A764F050012B181 /* Thread Safe Objects */,
 				1AEBE3E01A77E6F400CDF4F8 /* Logic */,
 				1A11232D1A76526500A35B33 /* Gingersnap Entities */,
-				1AAFFA6E1A7682B700549DB5 /* GSCoreDataManager.h */,
-				1AAFFA6F1A7682B700549DB5 /* GSCoreDataManager.m */,
 				1AEBE3D81A77E37900CDF4F8 /* GingersnapCDModel.xcdatamodeld */,
 			);
 			name = "Gingersnap CoreData";
@@ -298,9 +364,10 @@
 		1AEBE3E01A77E6F400CDF4F8 /* Logic */ = {
 			isa = PBXGroup;
 			children = (
+				1A5861991A7A4B9E00387857 /* ParentApp */,
+				1A5861981A7A4B9400387857 /* GrandparentApp */,
+				1A5861971A7A4B7200387857 /* Data Logic */,
 				1AEBE3E41A77E72D00CDF4F8 /* Gingersnap Manager */,
-				1AAFFA741A76957E00549DB5 /* GingersnapSession.h */,
-				1AAFFA751A76957E00549DB5 /* GingersnapSession.m */,
 			);
 			name = Logic;
 			sourceTree = "<group>";
@@ -308,6 +375,8 @@
 		1AEBE3E41A77E72D00CDF4F8 /* Gingersnap Manager */ = {
 			isa = PBXGroup;
 			children = (
+				1AAFFA6E1A7682B700549DB5 /* GSCoreDataManager.h */,
+				1AAFFA6F1A7682B700549DB5 /* GSCoreDataManager.m */,
 				1AEBE3E11A77E72200CDF4F8 /* GingersnapManager.h */,
 				1AEBE3E21A77E72200CDF4F8 /* GingersnapManager.m */,
 				1AEBE3E51A77E74B00CDF4F8 /* GPAppManager.h */,
@@ -332,6 +401,10 @@
 		D42168757438E47E6B0CAAE1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1A5861931A7A49A900387857 /* AWSRuntime.framework */,
+				1A5861941A7A49A900387857 /* AWSS3.framework */,
+				1A58618A1A7A487600387857 /* MessageUI.framework */,
+				1A5861881A7A486F00387857 /* UIKit.framework */,
 				AD7582C9273F5DA9171EDAF3 /* libPods.a */,
 			);
 			name = Frameworks;
@@ -340,9 +413,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		1AAE3C9C1A764EBC0012B181 /* YOLO */ = {
+		1AAE3C9C1A764EBC0012B181 /* GSCoreData */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1AAE3CC31A764EBC0012B181 /* Build configuration list for PBXNativeTarget "YOLO" */;
+			buildConfigurationList = 1AAE3CC31A764EBC0012B181 /* Build configuration list for PBXNativeTarget "GSCoreData" */;
 			buildPhases = (
 				FD0BB8A7BEB362999BC1131F /* Check Pods Manifest.lock */,
 				1AAE3C991A764EBC0012B181 /* Sources */,
@@ -354,9 +427,9 @@
 			);
 			dependencies = (
 			);
-			name = YOLO;
+			name = GSCoreData;
 			productName = GSCoreData;
-			productReference = 1AAE3C9D1A764EBC0012B181 /* grandparent.app */;
+			productReference = 1AAE3C9D1A764EBC0012B181 /* GSCoreData.app */;
 			productType = "com.apple.product-type.application";
 		};
 		1AAE3CB81A764EBC0012B181 /* GSCoreDataTests */ = {
@@ -409,7 +482,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1AAE3C9C1A764EBC0012B181 /* YOLO */,
+				1AAE3C9C1A764EBC0012B181 /* GSCoreData */,
 				1AAE3CB81A764EBC0012B181 /* GSCoreDataTests */,
 			);
 		};
@@ -474,8 +547,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				1AE926381A792173007AB75C /* GingersnapRelationship.m in Sources */,
+				1A58619C1A7A4BBC00387857 /* ParentAppManager.m in Sources */,
 				1AEBE3D01A77DE7D00CDF4F8 /* HTTPRequests.m in Sources */,
 				1AEBE3D61A77DE9F00CDF4F8 /* GCRequests.m in Sources */,
+				1A5861871A7A438000387857 /* GingersnapRootData.m in Sources */,
+				1A5861921A7A493B00387857 /* AWSSettings.m in Sources */,
 				1AAFFA701A7682B700549DB5 /* GSCoreDataManager.m in Sources */,
 				1AEBE3D31A77DE8F00CDF4F8 /* GPRequests.m in Sources */,
 				1AEBE3CC1A77DE4B00CDF4F8 /* HTTPRequest.m in Sources */,
@@ -485,12 +561,13 @@
 				1AAFFA761A76957E00549DB5 /* GingersnapSession.m in Sources */,
 				1A11232C1A76522F00A35B33 /* GSThreadSafeManagedObject.m in Sources */,
 				1AE926261A792172007AB75C /* GingersnapEvent.m in Sources */,
+				1A5861841A7A433C00387857 /* GingersnapDataParser.m in Sources */,
 				1AEBE3E31A77E72200CDF4F8 /* GingersnapManager.m in Sources */,
 				1AE926201A792172007AB75C /* GingersnapGrandparent.m in Sources */,
 				1AE9261D1A792172007AB75C /* GingersnapChild.m in Sources */,
 				1AE926231A792172007AB75C /* GingersnapUser.m in Sources */,
-				1AEBE3DD1A77E3DB00CDF4F8 /* GingersnapUserYOLO.m in Sources */,
 				1AE9263B1A792173007AB75C /* GingersnapShare.m in Sources */,
+				1A58618F1A7A492700387857 /* AmazonS3Manager.m in Sources */,
 				1AEBE3DA1A77E37900CDF4F8 /* GingersnapCDModel.xcdatamodeld in Sources */,
 				1AE926321A792173007AB75C /* GingersnapConnection.m in Sources */,
 				1AAE3CAC1A764EBC0012B181 /* ViewController.m in Sources */,
@@ -502,6 +579,7 @@
 				1AEBE3F01A77E9D900CDF4F8 /* GingersnapImageManager.m in Sources */,
 				1AE926351A792173007AB75C /* GingersnapParent.m in Sources */,
 				1AE9262F1A792173007AB75C /* GingersnapAvatar.m in Sources */,
+				1A58619F1A7A4BCA00387857 /* GrandparentAppManager.m in Sources */,
 				1AE9261A1A792171007AB75C /* GingersnapActivity.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -519,7 +597,7 @@
 /* Begin PBXTargetDependency section */
 		1AAE3CBB1A764EBC0012B181 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 1AAE3C9C1A764EBC0012B181 /* YOLO */;
+			target = 1AAE3C9C1A764EBC0012B181 /* GSCoreData */;
 			targetProxy = 1AAE3CBA1A764EBC0012B181 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -626,9 +704,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = GSCoreData/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -638,9 +721,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = GSCoreData/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -690,7 +778,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1AAE3CC31A764EBC0012B181 /* Build configuration list for PBXNativeTarget "YOLO" */ = {
+		1AAE3CC31A764EBC0012B181 /* Build configuration list for PBXNativeTarget "GSCoreData" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1AAE3CC41A764EBC0012B181 /* Debug */,

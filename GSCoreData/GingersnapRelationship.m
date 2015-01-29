@@ -25,8 +25,10 @@
         GingersnapRelationship* gsRelationship = (GingersnapRelationship*)[[GSCoreDataManager sharedManager] fetchSingleObjectWithID:identifier andClass:[GingersnapRelationship class]];
         
         if(gsRelationship)
+        {
+            callback(gsRelationship);
             return;
-        
+        }
         
         gsRelationship = (GingersnapRelationship*)[NSEntityDescription insertNewObjectForEntityForName:@"GingersnapRelationship" inManagedObjectContext:[[GSCoreDataManager sharedManager] managedObjectContext]];
         gsRelationship.identifier = identifier;

@@ -36,8 +36,10 @@
         GingersnapGrandparent* gsGP = (GingersnapGrandparent*)[[GSCoreDataManager sharedManager] fetchSingleObjectWithID:identifier andClass:[GingersnapGrandparent class]];
         
         if(gsGP)
+        {
+            callback(gsGP);
             return;
-        
+        }
         gsGP = (GingersnapGrandparent*)[NSEntityDescription insertNewObjectForEntityForName:@"GingersnapGrandparent" inManagedObjectContext:[[GSCoreDataManager sharedManager] managedObjectContext]];
         gsGP.identifier = identifier;
         
